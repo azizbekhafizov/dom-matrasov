@@ -1,6 +1,10 @@
+"use client";
 import { Truck, Clock, Layers } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 export default function Hero() {
+  const { t } = useTranslation();
+
   return (
     <section className="relative w-full">
       {/* Hero Banner */}
@@ -15,20 +19,27 @@ export default function Hero() {
       >
         <div className="flex flex-col gap-4 max-w-4xl">
           <h1 className="text-white text-5xl md:text-7xl font-black leading-tight tracking-tighter font-serif">
-            Дом Матрасов — Комфорт, достойный вашего сна
+            {t("hero.title")}
           </h1>
           <h2 className="text-white text-base md:text-lg font-normal leading-normal max-w-2xl mx-auto">
-            Ортопедические и анатомические матрасы из качественных импортных материалов.
+            {t("hero.subtitle")}
           </h2>
         </div>
 
         <div className="flex flex-wrap gap-4 justify-center mt-4">
           <button className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center rounded-lg h-12 px-5 bg-primary text-white text-base font-bold hover:bg-opacity-90 transition">
-            Каталог
+            {t("hero.catalog")}
           </button>
-          <button className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center rounded-lg h-12 px-5 bg-white/20 text-white text-base font-bold backdrop-blur-sm border border-white/30 hover:bg-white/30 transition">
-            Бесплатный замер
-          </button>
+          <a
+            href="https://t.me/Visco_admin"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-primary transition"
+          >
+            <button className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center rounded-lg h-12 px-5 bg-white/20 text-white text-base font-bold backdrop-blur-sm border border-white/30 hover:bg-white/30 transition">
+              {t("hero.measure")}
+            </button>
+          </a>
         </div>
       </div>
 
@@ -38,30 +49,24 @@ export default function Hero() {
           <div className="flex items-center justify-center md:justify-start gap-4">
             <Clock className="text-primary w-8 h-8" />
             <div>
-              <h3 className="font-bold">Готово за 1–2 дня</h3>
-              <p className="text-sm text-gray-600">
-                Быстрое производство индивидуальных заказов
-              </p>
+              <h3 className="font-bold">{t("hero.fastTitle")}</h3>
+              <p className="text-sm text-gray-600">{t("hero.fastDesc")}</p>
             </div>
           </div>
 
           <div className="flex items-center justify-center md:justify-start gap-4">
             <Truck className="text-primary w-8 h-8" />
             <div>
-              <h3 className="font-bold">Бесплатная доставка</h3>
-              <p className="text-sm text-gray-600">
-                По городу — доставка и замер бесплатно
-              </p>
+              <h3 className="font-bold">{t("hero.deliveryTitle")}</h3>
+              <p className="text-sm text-gray-600">{t("hero.deliveryDesc")}</p>
             </div>
           </div>
 
           <div className="flex items-center justify-center md:justify-start gap-4">
             <Layers className="text-primary w-8 h-8" />
             <div>
-              <h3 className="font-bold">Индивидуальный пошив</h3>
-              <p className="text-sm text-gray-600">
-                Изготовление под размер кровати
-              </p>
+              <h3 className="font-bold">{t("hero.customTitle")}</h3>
+              <p className="text-sm text-gray-600">{t("hero.customDesc")}</p>
             </div>
           </div>
         </div>

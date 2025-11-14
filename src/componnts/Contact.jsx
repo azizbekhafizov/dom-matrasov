@@ -1,9 +1,12 @@
 import React from "react";
-import { MapPin, Phone, Mail, Globe, Link } from "lucide-react";
+import { useTranslation } from "react-i18next";
+import { MapPin, Phone, Mail } from "lucide-react";
 import telegram from "../assets/images/telegram.jpg";
 import instagram from "../assets/images/instagram.jpg";
 
 const Contact = () => {
+  const { t } = useTranslation();
+
   return (
     <section
       id="contact"
@@ -11,7 +14,7 @@ const Contact = () => {
     >
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-bold leading-tight tracking-tight font-serif text-center mb-14 text-gray-900 dark:text-white">
-          Свяжитесь с нами
+          {t("contact.title")}
         </h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -19,13 +22,13 @@ const Contact = () => {
           <div className="flex flex-col gap-6">
             <div className="p-8 rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 shadow-md flex flex-col gap-6">
               <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">
-                Контактная информация
+                {t("contact.infoTitle")}
               </h3>
 
               <div className="space-y-4 text-gray-700 dark:text-gray-300">
                 <p className="flex items-center gap-3">
                   <MapPin className="text-primary w-6 h-6" />
-                  Mirabad 33, Tashkent, Uzbekistan
+                  {t("contact.address")}
                 </p>
 
                 <p className="flex items-center gap-3">
@@ -39,12 +42,8 @@ const Contact = () => {
                 </p>
 
                 <div className="flex items-center">
-                  <a  target="_blank" href="https://t.me/matras">
-                    <img
-                      className="rounded-full w-8 h-8"
-                      src={telegram}
-                      alt=""
-                    />
+                  <a target="_blank" href="https://t.me/matras">
+                    <img className="rounded-full w-8 h-8" src={telegram} alt="" />
                   </a>
                   <a
                     className="underline hover:text-primary ml-2"
@@ -56,12 +55,8 @@ const Contact = () => {
                 </div>
 
                 <div className="flex items-center">
-                  <a  target="_blank" href="https://instagram.com/dom.matrasov">
-                    <img
-                      className="rounded-full w-8 h-7"
-                      src={instagram}
-                      alt=""
-                    />
+                  <a target="_blank" href="https://instagram.com/dom.matrasov">
+                    <img className="rounded-full w-8 h-7" src={instagram} alt="" />
                   </a>
                   <a
                     className="underline hover:text-primary ml-2"
@@ -73,6 +68,7 @@ const Contact = () => {
                 </div>
               </div>
             </div>
+
             <div className="rounded-2xl overflow-hidden shadow-md border border-gray-200 dark:border-gray-700 h-80">
               <iframe
                 allowFullScreen=""
@@ -98,7 +94,7 @@ const Contact = () => {
                 htmlFor="name"
                 className="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300"
               >
-                Имя
+                {t("contact.name")}
               </label>
               <input
                 id="name"
@@ -114,7 +110,7 @@ const Contact = () => {
                 htmlFor="phone"
                 className="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300"
               >
-                Телефон
+                {t("contact.phone")}
               </label>
               <input
                 id="phone"
@@ -130,7 +126,7 @@ const Contact = () => {
                 htmlFor="message"
                 className="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300"
               >
-                Сообщение
+                {t("contact.message")}
               </label>
               <textarea
                 id="message"
@@ -144,7 +140,7 @@ const Contact = () => {
               type="submit"
               className="w-full flex justify-center py-3 px-6 rounded-lg font-semibold text-white bg-gradient-to-r from-primary to-blue-500 hover:opacity-90 transition-all shadow-md"
             >
-              Отправить сообщение
+              {t("contact.send")}
             </button>
           </form>
         </div>

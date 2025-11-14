@@ -1,36 +1,39 @@
 "use client";
 
+import { useTranslation } from "react-i18next";
 import { Globe, Rocket, Truck, ShieldCheck } from "lucide-react";
 
 export default function WhyChooseUsSection() {
+  const { t } = useTranslation();
+
   const features = [
     {
       icon: (
         <Globe className="w-12 h-12 text-primary group-hover:scale-110 transition-transform" />
       ),
-      title: "Импортные материалы",
-      desc: "Ткани и наполнители из Испании, Турции и России, пружины от надежного партнёра из Китая.",
+      title: t("why.features.materials.title"),
+      desc: t("why.features.materials.desc"),
     },
     {
       icon: (
         <Rocket className="w-12 h-12 text-primary group-hover:scale-110 transition-transform" />
       ),
-      title: "Быстрое изготовление",
-      desc: "Большинство заказов готовы в течение 1–2 дней.",
+      title: t("why.features.fast.title"),
+      desc: t("why.features.fast.desc"),
     },
     {
       icon: (
         <Truck className="w-12 h-12 text-primary group-hover:scale-110 transition-transform" />
       ),
-      title: "Бесплатная доставка и замер",
-      desc: "Замер кровати и доставка по городу — бесплатно.",
+      title: t("why.features.delivery.title"),
+      desc: t("why.features.delivery.desc"),
     },
     {
       icon: (
         <ShieldCheck className="w-12 h-12 text-primary group-hover:scale-110 transition-transform" />
       ),
-      title: "Гарантия 10–20 лет",
-      desc: "Долговечность и уверенность в качестве продукции.",
+      title: t("why.features.warranty.title"),
+      desc: t("why.features.warranty.desc"),
     },
   ];
 
@@ -40,7 +43,7 @@ export default function WhyChooseUsSection() {
       <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold font-serif text-center mb-12">
-            Почему выбирают Дом Матрасов
+            {t("why.title")}
           </h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
@@ -68,21 +71,19 @@ export default function WhyChooseUsSection() {
             "url('https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=2070&auto=format&fit=crop')",
         }}
       >
-        {/* Sof, engil gradient usti */}
         <div className="absolute inset-0 bg-gradient-to-t from-[#1a3a5f]/80 via-[#1a3a5f]/50 to-transparent" />
 
         <div className="relative max-w-4xl mx-auto text-center text-white">
           <h2 className="text-3xl md:text-5xl font-bold font-serif leading-tight drop-shadow-sm">
-            Приходите в наш шоурум
+            {t("why.showroom.title")}
           </h2>
 
           <p className="mt-4 text-lg text-white/85 max-w-2xl mx-auto leading-relaxed">
-            Испытайте комфорт наших матрасов лично — уютный шоурум в Миробадском
-            районе, Ташкент.
+            {t("why.showroom.desc")}
           </p>
 
           <button className="mt-8 px-8 py-3 border-2 border-white text-primary font-semibold rounded-full shadow-lg hover:bg-primary hover:text-white transition-all duration-300 hover:scale-105 active:scale-95">
-            Посмотреть на карте
+            {t("why.showroom.button")}
           </button>
         </div>
       </section>

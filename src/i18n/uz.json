@@ -6,5 +6,65 @@
     "delivery": "Yetkazib berish",
     "contacts": "Kontaktlar",
     "order": "Buyurtma berish"
+  },
+    "footer": {
+    "title": "Matraslar Uyi",
+    "subtitle": "Sizning uyqungiz uchun eng qulay matraslar.",
+    "rights": "Matraslar Uyi. Barcha huquqlar himoyalangan."
+  },
+    "contact": {
+    "title": "Biz bilan bog‘laning",
+    "infoTitle": "Aloqa ma’lumotlari",
+    "address": "Mirabad 33, Toshkent, O‘zbekiston",
+    "name": "Ism",
+    "phone": "Telefon",
+    "message": "Xabar",
+    "send": "Xabar yuborish"
+  },
+  
+  "why": {
+    "title": "Nega aynan Dom Matrasov?",
+    "features": {
+      "materials": {
+        "title": "Import materiallar",
+        "desc": "Matolar va to‘ldiruvchilar Ispaniya, Turkiya va Rossiyadan, prujinalar esa Xitoydagi ishonchli hamkordan."
+      },
+      "fast": {
+        "title": "Tez tayyorlanadi",
+        "desc": "Ko‘pchilik buyurtmalar 1–2 kun ichida tayyor bo‘ladi."
+      },
+      "delivery": {
+        "title": "Bepul yetkazib berish va o‘lchash",
+        "desc": "Yotoq o‘lchamini olish va shahar bo‘ylab yetkazib berish — mutlaqo bepul."
+      },
+      "warranty": {
+        "title": "10–20 yil kafolat",
+        "desc": "Uzoq umrli va sifatiga ishonchli mahsulotlar."
+      }
+    },
+    "showroom": {
+      "title": "Shourumimizga tashrif buyuring",
+      "desc": "Matraslarimiz qulayligini shaxsan his eting — Mirabad tumanidagi qulay shourumimizga marhamat.",
+      "button": "Xaritada ko‘rish"
+    }
+  },
+    "hero": {
+    "title": "Matraslar Uyi — Sizning uyqungizga munosib qulaylik",
+    "subtitle": "Yuqori sifatli import materiallardan tayyorlangan ortopedik va anatomik matraslar.",
+    "catalog": "Katalog",
+    "measure": "Bepul o‘lchov",
+    "fastTitle": "1–2 kunda tayyor",
+    "fastDesc": "Buyurtmalar tez ishlab chiqiladi",
+    "deliveryTitle": "Bepul yetkazib berish",
+    "deliveryDesc": "Shahar bo‘ylab yetkazib berish va o‘lchov — bepul",
+    "customTitle": "Individual tikuv",
+    "customDesc": "Krovatingiz o‘lchamiga mos matras tayyorlaymiz"
+  },
+  "about": {
+    "title": "2005-yildan beri — ishonchli sifat",
+    "description": "Biz import materiallardan matraslar ishlab chiqaramiz: Xitoydagi 20 yillik hamkorimizdan prujinali bloklar, shuningdek, Ispaniya, Turkiya va Rossiyadan matolar hamda to‘ldirgichlar. Mahsulotlarga 10 yildan 20 yilgacha kafolat beriladi.",
+    "button": "Batafsil ma’lumot",
+    "imageAlt": "Usta sifatli matras tikib yig‘moqda"
   }
+
 }

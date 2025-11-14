@@ -1,4 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import Navbar from "./componnts/Navbar";
 import Hero from "./componnts/Hero";
 import About from "./componnts/About";
@@ -7,29 +9,54 @@ import WhyChooseUs from "./componnts/WhyChooseUs";
 import Showroom from "./componnts/Showroom";
 import Contact from "./componnts/Contact";
 import Footer from "./componnts/Footer";
+import Loading from "./componnts/Loading";
 
 function App() {
+  const { i18n } = useTranslation();
+  const [loading, setLoading] = useState(true);
+
+  // Sahifa birinchi yuklanishida
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 1500); // 1.5s
+    return () => clearTimeout(timer);
+  }, []);
+
+  // Til almashtirishda loading
+  useEffect(() => {
+    const handleLanguageChange = () => {
+      setLoading(true);
+      setTimeout(() => setLoading(false), 2000); // 2s loading
+    };
+
+    i18n.on("languageChanged", handleLanguageChange);
+    return () => i18n.off("languageChanged", handleLanguageChange);
+  }, [i18n]);
+
   return (
     <Router>
-      <div className="bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
-        <Navbar />
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <>
-                <Hero />
-                <About />
-                <Products />
-                <WhyChooseUs />
-                <Showroom />
-                <Contact />
-              </>
-            }
-          />
-        </Routes>
-        <Footer />
-      </div>
+      {loading ? (
+        <Loading />
+      ) : (
+        <div className="bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
+          <Navbar />
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <>
+                  <Hero />
+                  <About />
+                  <Products />
+                  <WhyChooseUs />
+                  <Showroom />
+                  <Contact />
+                </>
+              }
+            />
+          </Routes>
+          <Footer />
+        </div>
+      )}
     </Router>
   );
 }
