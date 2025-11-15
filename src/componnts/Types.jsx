@@ -1,4 +1,12 @@
 import { useTranslation } from "react-i18next";
+import AnotomicImg from "../assets/images/anatomic.webp";
+import OrthoImg from "../assets/images/ortho.webp";
+import SprlessImg from "../assets/images/sprless.webp";
+import KidsImg from "../assets/images/kids.jpg";
+
+
+
+
 
 export default function Types() {
   const { t } = useTranslation();
@@ -13,11 +21,11 @@ export default function Types() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
 
-          {/* 1 — Анатомические */}
+          {/* 1 */}
           <div className="group bg-white dark:bg-gray-800 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden">
             <div className="h-48 w-full overflow-hidden">
               <img
-                src="src/assets/images/Анатомические.webp"
+                src={AnotomicImg}
                 alt="anatomic"
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
               />
@@ -30,11 +38,11 @@ export default function Types() {
             </div>
           </div>
 
-          {/* 2 — Ортопедические */}
+          {/* 2 */}
           <div className="group bg-white dark:bg-gray-800 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden">
             <div className="h-48 w-full overflow-hidden">
               <img
-                src="src/assets/images/Ортопедические.webp"
+                src={OrthoImg}
                 alt="ortho"
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
               />
@@ -47,11 +55,11 @@ export default function Types() {
             </div>
           </div>
 
-          {/* 3 — Беспружинные */}
+          {/* 3 */}
           <div className="group bg-white dark:bg-gray-800 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden">
             <div className="h-48 w-full overflow-hidden">
               <img
-                src="src/assets/images/Беспружинные.webp"
+                src={SprlessImg}
                 alt="sprless"
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
               />
@@ -64,11 +72,11 @@ export default function Types() {
             </div>
           </div>
 
-          {/* 4 — Детские */}
+          {/* 4 */}
           <div className="group bg-white dark:bg-gray-800 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden">
             <div className="h-48 w-full overflow-hidden">
               <img
-                src="src/assets/images/Детские.jpg"
+                src={KidsImg}
                 alt="kids"
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
               />
