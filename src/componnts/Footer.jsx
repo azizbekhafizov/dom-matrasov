@@ -11,7 +11,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-gray-900 dark:bg-gray-800 text-white py-12">
+    <footer id="footer" className="bg-gray-900 dark:bg-gray-800 text-white py-12">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8 px-4 sm:px-6 lg:px-8">
         {/* Brand info */}
         <div className="text-center md:text-left">

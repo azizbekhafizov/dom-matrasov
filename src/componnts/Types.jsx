@@ -5,12 +5,9 @@ import SprlessImg from "../assets/images/sprless.webp";
 import KidsImg from "../assets/images/kids.jpg";
 
 
-
-
-
 export default function Types() {
   const { t } = useTranslation();
-
+<h1>salom hammaga bu men Azizbek Hafizov bugun sizlarga men tuzgan web site haqida gapirib bermoqchiman bu sayt unchalik profess</h1>
   return (
     <section id="types" className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
@@ -91,6 +88,8 @@ export default function Types() {
 
         </div>
       </div>
+
+      
     </section>
   );
 }

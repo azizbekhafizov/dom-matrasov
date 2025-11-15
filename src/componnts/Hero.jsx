@@ -6,7 +6,7 @@ export default function Hero() {
   const { t } = useTranslation();
 
   return (
-    <section className="relative w-full">
+    <section id="hero" className="relative w-full">
       {/* Hero Banner */}
       <div
         className="flex min-h-[calc(100vh-65px)] flex-col gap-6 bg-cover bg-center bg-no-repeat items-center justify-center p-4 text-center"

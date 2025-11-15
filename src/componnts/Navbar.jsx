@@ -2,12 +2,14 @@ import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import logo from "../assets/images/logo.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 
 export default function Navbar() {
   const { t, i18n } = useTranslation();
   const [menuOpen, setMenuOpen] = useState(false);
   const [lang, setLang] = useState(i18n.language?.toUpperCase() || "RU");
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     setLang(i18n.language?.toUpperCase() || "RU");
@@ -20,50 +22,68 @@ export default function Navbar() {
   };
 
   const navLinks = [
-    { name: t("nav.home", "Главная"), to: "/" },
-    { name: t("nav.about", "О нас"), to: "/#about" },
-    { name: t("nav.products", "Продукция"), to: "/#products" },
-    { name: t("nav.delivery", "Доставка"), to: "/#delivery" },
-    { name: t("nav.contacts", "Контакты"), to: "/#contact" },
+    { name: t("nav.home"), to: "hero", scroll: true },
+    { name: t("nav.about"), to: "about", scroll: true },
+    { name: t("nav.products"), to: "/products", scroll: false },
+    { name: t("nav.contacts"), to: "contact", scroll: true },
   ];
+
+  const onNavClick = (link) => {
+    if (link.scroll) {
+      // Agar Home page bo'lsa scroll qilamiz
+      if (location.pathname === "/") {
+        const section = document.getElementById(link.to);
+        if (section) section.scrollIntoView({ behavior: "smooth" });
+      } else {
+        // Boshqa sahifadan Home pagega o'tib scroll qilamiz
+        navigate("/");
+        setTimeout(() => {
+          const section = document.getElementById(link.to);
+          if (section) section.scrollIntoView({ behavior: "smooth" });
+        }, 150);
+      }
+    } else {
+      // Products sahifasiga route
+      navigate(link.to);
+    }
+    setMenuOpen(false);
+  };
 
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-[#0d1b2a]/95 backdrop-blur-md shadow-lg">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 md:px-10 py-3 md:py-4">
-        {/* ==== LOGO ==== */}
+        {/* LOGO */}
         <div className="flex items-center gap-3 md:gap-4">
-          <Link to={'/'}>
-          <img
-            src={logo}
-            alt="Дом Матрасов"
-            className="w-11 h-11 md:w-14 md:h-14 object-contain rounded-md"
-          />
+          <Link to={"/"}>
+            <img
+              src={logo}
+              alt="Дом Матрасов"
+              className="w-11 h-11 md:w-14 md:h-14 object-contain rounded-md"
+            />
           </Link>
           <div className="leading-tight">
             <h1 className="text-lg md:text-xl font-semibold text-white tracking-wide">
-              <Link to={'/'}>
-              Дом Матрасов
-              </Link>
+              <Link to={"/"}>Дом Матрасов</Link>
             </h1>
           </div>
         </div>
 
-        {/* ==== DESKTOP MENU ==== */}
+        {/* DESKTOP MENU */}
         <ul className="hidden lg:flex items-center gap-10 text-white/90 font-medium">
           {navLinks.map((link) => (
-            <li key={link.to}>
-              <a
-                href={link.to}
-                className="relative group transition"
+            <li key={link.name}>
+              <button
+                onClick={() => onNavClick(link)}
+                className="relative group transition text-white"
               >
                 {link.name}
                 <span className="absolute left-0 -bottom-1 w-0 bg-white group-hover:w-full transition-all duration-300"></span>
-              </a>
+              </button>
             </li>
           ))}
         </ul>
 
-        {/* ==== RIGHT SIDE ==== */}
+        {/* RIGHT SIDE: Order + Lang */}
         <div className="hidden md:flex items-center gap-4">
           <a
             href="#contact"
@@ -96,7 +116,7 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* ==== MOBILE MENU BUTTON ==== */}
+        {/* MOBILE MENU BUTTON */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
           className="md:hidden p-2 rounded-md text-white border border-white/20"
@@ -105,7 +125,7 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* ==== MOBILE MENU ==== */}
+      {/* MOBILE MENU */}
       <div
         className={`md:hidden overflow-hidden bg-[#0d1b2a] text-white transition-all duration-300 ${
           menuOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
@@ -113,14 +133,13 @@ export default function Navbar() {
       >
         <ul className="flex flex-col items-center gap-4 py-4 text-base font-medium">
           {navLinks.map((link) => (
-            <li key={link.to}>
-              <a
-                href={link.to}
-                onClick={() => setMenuOpen(false)}
+            <li key={link.name}>
+              <button
+                onClick={() => onNavClick(link)}
                 className="block py-2 hover:text-blue-300 transition"
               >
                 {link.name}
-              </a>
+              </button>
             </li>
           ))}
           <a

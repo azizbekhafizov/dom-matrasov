@@ -6,7 +6,7 @@ export default function About() {
   const { t } = useTranslation();
 
   return (
-    <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8" id="about">
+    <section id="about" className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-center items-center gap-12">
         {/* Image */}
         <div

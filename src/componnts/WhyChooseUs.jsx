@@ -40,7 +40,7 @@ export default function WhyChooseUsSection() {
   return (
     <>
       {/* WHY CHOOSE US */}
-      <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8">
+      <section id="whychooseus" className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold font-serif text-center mb-12">
             {t("why.title")}

@@ -47,7 +47,6 @@ function App() {
                 <>
                   <Hero />
                   <About />
-                  <Products />
                   <WhyChooseUs />
                   <Types />
                   <Showroom />
@@ -55,6 +54,7 @@ function App() {
                 </>
               }
             />
+            <Route path="/products" element={<Products />} />
           </Routes>
           <Footer />
         </div>

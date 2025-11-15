@@ -2,9 +2,9 @@ import React from 'react'
 
 function Showroom() {
   return (
-    <div>
+    <section id='showroom'>
       
-    </div>
+    </section>
   )
 }
 
