@@ -10,6 +10,7 @@ import Showroom from "./componnts/Showroom";
 import Contact from "./componnts/Contact";
 import Footer from "./componnts/Footer";
 import Loading from "./componnts/Loading";
+import Types from "./componnts/Types";
 
 function App() {
   const { i18n } = useTranslation();
@@ -48,6 +49,7 @@ function App() {
                   <About />
                   <Products />
                   <WhyChooseUs />
+                  <Types />
                   <Showroom />
                   <Contact />
                 </>

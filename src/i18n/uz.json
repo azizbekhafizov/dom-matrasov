@@ -65,6 +65,22 @@
     "description": "Biz import materiallardan matraslar ishlab chiqaramiz: Xitoydagi 20 yillik hamkorimizdan prujinali bloklar, shuningdek, Ispaniya, Turkiya va Rossiyadan matolar hamda to‘ldirgichlar. Mahsulotlarga 10 yildan 20 yilgacha kafolat beriladi.",
     "button": "Batafsil ma’lumot",
     "imageAlt": "Usta sifatli matras tikib yig‘moqda"
+  },
+
+    "types_title": "Matras turlari",
+
+  "types": {
+    "anatomic_title": "Anatomik matraslar",
+    "anatomic_desc": "Uxlash vaqtida tana tabiiy holatni egallashiga yordam beradi. Umurtqa pog'onasining barcha zonalarini qo‘llab-quvvatlaydi.",
+
+    "ortho_title": "Ortopedik matraslar",
+    "ortho_desc": "Bel og‘rig‘i bo‘lganlar uchun tavsiya qilinadi. Umurtqani mustahkam qo‘llab-quvvatlaydi.",
+
+    "sprless_title": "Bahorsiz matraslar",
+    "sprless_desc": "Jim, uzoq xizmat qiladi va allergiya chaqirmaydi. Qattiqroq yotishni yoqtiradiganlar uchun ideal.",
+
+    "kids_title": "Bolalar matraslari",
+    "kids_desc": "Yangi tug‘ilgan chaqaloqlar va bolalar uchun xavfsiz hamda ortopedik qulay matraslar."
   }
 
 }
