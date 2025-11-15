@@ -51,7 +51,7 @@ export default function Types() {
           <div className="group bg-white dark:bg-gray-800 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden">
             <div className="h-48 w-full overflow-hidden">
               <img
-                src="src/assets/images/matras.jpg"
+                src="src/assets/images/Беспружинные.webp"
                 alt="sprless"
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
               />
