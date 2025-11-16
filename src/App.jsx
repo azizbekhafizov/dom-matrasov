@@ -4,7 +4,6 @@ import { useTranslation } from "react-i18next";
 import Navbar from "./componnts/Navbar";
 import Hero from "./componnts/Hero";
 import About from "./componnts/About";
-import Products from "./componnts/Products";
 import WhyChooseUs from "./componnts/WhyChooseUs";
 import Showroom from "./componnts/Showroom";
 import Contact from "./componnts/Contact";
@@ -54,7 +53,6 @@ function App() {
                 </>
               }
             />
-            <Route path="/products" element={<Products />} />
           </Routes>
           <Footer />
         </div>
