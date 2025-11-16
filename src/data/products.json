@@ -1,0 +1,247 @@
+[
+  {
+    "id": 1,
+    "name": "Ortopedik Comfort",
+    "img": "https://i.ibb.co/tXk16Dx/m1.jpg",
+    "description": "Ortopedik qatlamli premium matras. Katta yuklama uchun ideal.",
+    "rating": 5,
+    "price": 1800000
+  },
+  {
+    "id": 2,
+    "name": "Memory Foam Plus",
+    "img": "https://i.ibb.co/80cwx0J/m2.jpg",
+    "description": "Qotmagan Memory Foam texnologiyasi bilan yuqori qulaylik.",
+    "rating": 4,
+    "price": 2300000
+  },
+  {
+    "id": 3,
+    "name": "Soft Dream",
+    "img": "https://i.ibb.co/dJNYkJv/m3.jpg",
+    "description": "Yumshoq qatlamli, yengil va qulay uyqu uchun yaratilgan.",
+    "rating": 5,
+    "price": 1500000
+  },
+  {
+    "id": 4,
+    "name": "Ultra Spring",
+    "img": "https://i.ibb.co/0cS6pVh/m4.jpg",
+    "description": "Mustahkam prujina bloki bilan uzoq yillik ishlashga mo‘ljallangan.",
+    "rating": 4,
+    "price": 2700000
+  },
+  {
+    "id": 5,
+    "name": "Relax Premium",
+    "img": "https://i.ibb.co/GM4DWYk/m5.jpg",
+    "description": "Yuqori zichlikdagi penali matras. Haroratni yaxshi ushlab turadi.",
+    "rating": 5,
+    "price": 2100000
+  },
+  {
+    "id": 6,
+    "name": "Dual Side Comfort",
+    "img": "https://i.ibb.co/dbckwMb/m6.jpg",
+    "description": "2 tomonlama (qish-yoz) ishlatiladigan universal matras.",
+    "rating": 4,
+    "price": 1900000
+  },
+
+  {
+    "id": 7,
+    "name": "Royal Ortho",
+    "img": "https://i.ibb.co/wQ2j7dZ/m7.jpg",
+    "description": "Ortopedik maxsus qatlamli yuqori sifatli model.",
+    "rating": 5,
+    "price": 2900000
+  },
+  {
+    "id": 8,
+    "name": "Dream Line",
+    "img": "https://i.ibb.co/9WV15ZB/m8.jpg",
+    "description": "Yengil, havodor matras. Bolalar va katta yoshdagilar uchun ideal.",
+    "rating": 4,
+    "price": 1600000
+  },
+  {
+    "id": 9,
+    "name": "Bio Balance",
+    "img": "https://i.ibb.co/nBv845V/m9.jpg",
+    "description": "Tabiiy materiallar asosida tayyorlangan ekologik matras.",
+    "rating": 5,
+    "price": 2600000
+  },
+  {
+    "id": 10,
+    "name": "MaxRelax Pro",
+    "img": "https://i.ibb.co/3f7BZY4/m10.jpg",
+    "description": "Katta vazn uchun mo‘ljallangan kuchaytirilgan model.",
+    "rating": 5,
+    "price": 3100000
+  },
+
+  {
+    "id": 11,
+    "name": "SoftCloud",
+    "img": "https://i.ibb.co/ZfJsmVh/m11.jpg",
+    "description": "Yumshoq bulutga o‘xshash maksimal qulaylik beradi.",
+    "rating": 4,
+    "price": 1700000
+  },
+  {
+    "id": 12,
+    "name": "OrthoCare",
+    "img": "https://i.ibb.co/SKwMvKj/m12.jpg",
+    "description": "Bel og‘rig‘i uchun ortopedik qo‘llab-quvvatlovchi qatlam.",
+    "rating": 5,
+    "price": 2400000
+  },
+  {
+    "id": 13,
+    "name": "Titan Spring",
+    "img": "https://i.ibb.co/6RNtDC4/m13.jpg",
+    "description": "Prujinali bo‘limda titan mustahkamlovchi qatlam bor.",
+    "rating": 5,
+    "price": 3500000
+  },
+    {
+        "id": 14,
+        "name": "Memory Comfort",
+        "img": "https://i.ibb.co/7Y6y2cD/m14.jpg",
+        "description": "Memory Foam va ortopedik qatlamlarning mukammal kombinatsiyasi.",
+        "rating": 4,
+        "price": 2800000
+    },
+  {
+    "id": 15,
+    "name": "AirFlow Pro",
+    "img": "https://i.ibb.co/GJ3q4Sm/m15.jpg",
+    "description": "Ventilyatsiya teshiklari bilan sovuq tutuvchi konstruktsiya.",
+    "rating": 4,
+    "price": 2200000
+  },
+
+  {
+    "id": 16,
+    "name": "Relax Extra",
+    "img": "https://i.ibb.co/4RGG7v5/m16.jpg",
+    "description": "Kundalik hamda uzoq muddatli ishlatishga qulay.",
+    "rating": 5,
+    "price": 2000000
+  },
+  {
+    "id": 17,
+    "name": "Grand Ortho",
+    "img": "https://i.ibb.co/Srrhq1Y/m17.jpg",
+    "description": "Belga ortopedik yordam beruvchi premium matras.",
+    "rating": 5,
+    "price": 3600000
+  },
+  {
+    "id": 18,
+    "name": "Mega Spring",
+    "img": "https://i.ibb.co/S5VmZ1m/m18.jpg",
+    "description": "Kuchaytirilgan prujina bloki bilan mustahkam.",
+    "rating": 4,
+    "price": 2500000
+  },
+  {
+    "id": 19,
+    "name": "Memory Ultra",
+    "img": "https://i.ibb.co/rmhqfCf/m19.jpg",
+    "description": "Tanaga moslashuvchi yuqori texnologik Memory Foam.",
+    "rating": 5,
+    "price": 3300000
+  },
+  {
+    "id": 20,
+    "name": "Premium Soft",
+    "img": "https://i.ibb.co/RQCnnBf/m20.jpg",
+    "description": "Yumshoq qatlamli, hushbo‘y to‘qima bilan qoplangan.",
+    "rating": 4,
+    "price": 2100000
+  },
+
+  {
+    "id": 21,
+    "name": "EcoFoam",
+    "img": "https://i.ibb.co/wzXkSn4/m21.jpg",
+    "description": "Ekologik toza materiallardan tayyorlangan yengil model.",
+    "rating": 4,
+    "price": 1600000
+  },
+  {
+    "id": 22,
+    "name": "Strong Support",
+    "img": "https://i.ibb.co/ZJm9n04/m22.jpg",
+    "description": "Belni mustahkam ushlab turadigan qatlamli ortopedik matras.",
+    "rating": 5,
+    "price": 3000000
+  },
+  {
+    "id": 23,
+    "name": "Relax Duo",
+    "img": "https://i.ibb.co/nDd0gSG/m23.jpg",
+    "description": "2 tomonlama qulay — bir tomoni yumshoq, biri qattiq.",
+    "rating": 4,
+    "price": 1900000
+  },
+  {
+    "id": 24,
+    "name": "GoldLine Premium",
+    "img": "https://i.ibb.co/Mk4BfM7/m24.jpg",
+    "description": "Premium segmentdagi yuqori sifatli model.",
+    "rating": 5,
+    "price": 3800000
+  },
+  {
+    "id": 25,
+    "name": "High Density Pro",
+    "img": "https://i.ibb.co/4MBGQ6q/m25.jpg",
+    "description": "Zichligi juda yuqori bo‘lgan penali model.",
+    "rating": 5,
+    "price": 3400000
+  },
+
+  {
+    "id": 26,
+    "name": "Thermo Balance",
+    "img": "https://i.ibb.co/47Sz8d8/m26.jpg",
+    "description": "Issiqlikni teng ushlovchi maxsus qatlam texnologiyasi.",
+    "rating": 4,
+    "price": 2400000
+  },
+  {
+    "id": 27,
+    "name": "Ortho Master",
+    "img": "https://i.ibb.co/ysQnqmd/m27.jpg",
+    "description": "Professional ortopedlar tavsiya etgan model.",
+    "rating": 5,
+    "price": 3900000
+  },
+  {
+    "id": 28,
+    "name": "Eco Spring",
+    "img": "https://i.ibb.co/SmsnKdP/m28.jpg",
+    "description": "Tabiiy materiallar + prujina kombinatsiyasi.",
+    "rating": 4,
+    "price": 2100000
+  },
+  {
+    "id": 29,
+    "name": "MultiCare Foam",
+    "img": "https://i.ibb.co/34BHXRM/m29.jpg",
+    "description": "Orqa va bo‘yinga mukammal moslashuvchi matras.",
+    "rating": 5,
+    "price": 2700000
+  },
+  {
+    "id": 30,
+    "name": "Soft Premium Lux",
+    "img": "https://i.ibb.co/y6VHtXR/m30.jpg",
+    "description": "Juda yumshoq, premium uyqu sifati uchun ishlab chiqilgan.",
+    "rating": 5,
+    "price": 3500000
+  }
+]

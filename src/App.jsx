@@ -10,6 +10,7 @@ import Contact from "./componnts/Contact";
 import Footer from "./componnts/Footer";
 import Loading from "./componnts/Loading";
 import Types from "./componnts/Types";
+import Products from "./componnts/Products";
 
 function App() {
   const { i18n } = useTranslation();
@@ -53,10 +54,12 @@ function App() {
                 </>
               }
             />
+            <Route path="/products" element={<Products />} />
           </Routes>
           <Footer />
         </div>
       )}
+      
     </Router>
   );
 }
