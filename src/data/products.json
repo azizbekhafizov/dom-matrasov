@@ -1,247 +1,842 @@
 [
   {
     "id": 1,
-    "name": "Ortopedik Comfort",
-    "img": "https://i.ibb.co/tXk16Dx/m1.jpg",
-    "description": "Ortopedik qatlamli premium matras. Katta yuklama uchun ideal.",
+    "category": "orthopedic",
+    "name": { "ru": "Ortopedik Classic", "uz": "Ortopedik Classic" },
+    "description": {
+      "ru": "Жёсткий ортопедический матрас с ровной поддержкой позвоночника.",
+      "uz": "Qattiq ortopedik matras, umurtqa pog'onasiga tekis qo'llab-quvvatlovchi."
+    },
+    "img": "/images/orthopedic/1.jpg",
     "rating": 5,
-    "price": 1800000
+    "price": 1650000
   },
   {
     "id": 2,
-    "name": "Memory Foam Plus",
-    "img": "https://i.ibb.co/80cwx0J/m2.jpg",
-    "description": "Qotmagan Memory Foam texnologiyasi bilan yuqori qulaylik.",
+    "category": "orthopedic",
+    "name": { "ru": "Strong Support", "uz": "Strong Support" },
+    "description": {
+      "ru": "Матрас с усиленными слоями для людей с большим весом.",
+      "uz": "Katta og'irlikdagi insonlar uchun mustahkamlangan qatlamli matras."
+    },
+    "img": "/images/orthopedic/2.jpg",
     "rating": 4,
-    "price": 2300000
+    "price": 1850000
   },
   {
     "id": 3,
-    "name": "Soft Dream",
-    "img": "https://i.ibb.co/dJNYkJv/m3.jpg",
-    "description": "Yumshoq qatlamli, yengil va qulay uyqu uchun yaratilgan.",
-    "rating": 5,
-    "price": 1500000
-  },
-  {
-    "id": 4,
-    "name": "Ultra Spring",
-    "img": "https://i.ibb.co/0cS6pVh/m4.jpg",
-    "description": "Mustahkam prujina bloki bilan uzoq yillik ishlashga mo‘ljallangan.",
-    "rating": 4,
-    "price": 2700000
-  },
-  {
-    "id": 5,
-    "name": "Relax Premium",
-    "img": "https://i.ibb.co/GM4DWYk/m5.jpg",
-    "description": "Yuqori zichlikdagi penali matras. Haroratni yaxshi ushlab turadi.",
+    "category": "orthopedic",
+    "name": { "ru": "Orto Premium", "uz": "Orto Premium" },
+    "description": {
+      "ru": "Плотный ортопедический матрас премиум класса.",
+      "uz": "Yuqori sifatli zich ortopedik premium matras."
+    },
+    "img": "/images/orthopedic/3.jpg",
     "rating": 5,
     "price": 2100000
   },
   {
-    "id": 6,
-    "name": "Dual Side Comfort",
-    "img": "https://i.ibb.co/dbckwMb/m6.jpg",
-    "description": "2 tomonlama (qish-yoz) ishlatiladigan universal matras.",
+    "id": 4,
+    "category": "orthopedic",
+    "name": { "ru": "Hard Flex", "uz": "Hard Flex" },
+    "description": {
+      "ru": "Жёсткий пружинный блок для правильной осанки.",
+      "uz": "To‘g‘ri qomat uchun qattiq prujinali blok."
+    },
+    "img": "/images/orthopedic/4.jpg",
     "rating": 4,
-    "price": 1900000
+    "price": 1400000
   },
-
+  {
+    "id": 5,
+    "category": "orthopedic",
+    "name": { "ru": "Orto Strong", "uz": "Orto Strong" },
+    "description": {
+      "ru": "Высокая жёсткость и поддержка всего тела.",
+      "uz": "Yuqori qattiqlik va butun tanani qo‘llab-quvvatlash."
+    },
+    "img": "/images/orthopedic/5.jpg",
+    "rating": 5,
+    "price": 1950000
+  },
+  {
+    "id": 6,
+    "category": "orthopedic",
+    "name": { "ru": "Orto AirFlow", "uz": "Orto AirFlow" },
+    "description": {
+      "ru": "Улучшенная вентиляция и ортопедический эффект.",
+      "uz": "Yaxshilangan shamollatish va ortopedik effekt."
+    },
+    "img": "/images/orthopedic/6.jpg",
+    "rating": 4,
+    "price": 1550000
+  },
   {
     "id": 7,
-    "name": "Royal Ortho",
-    "img": "https://i.ibb.co/wQ2j7dZ/m7.jpg",
-    "description": "Ortopedik maxsus qatlamli yuqori sifatli model.",
+    "category": "orthopedic",
+    "name": { "ru": "Medical Orto", "uz": "Medical Orto" },
+    "description": {
+      "ru": "Рекомендован ортопедами для ежедневного использования.",
+      "uz": "Ortopedlar tomonidan tavsiya etilgan kundalik matras."
+    },
+    "img": "/images/orthopedic/7.jpg",
     "rating": 5,
-    "price": 2900000
+    "price": 2200000
   },
   {
     "id": 8,
-    "name": "Dream Line",
-    "img": "https://i.ibb.co/9WV15ZB/m8.jpg",
-    "description": "Yengil, havodor matras. Bolalar va katta yoshdagilar uchun ideal.",
+    "category": "orthopedic",
+    "name": { "ru": "Orto Balance", "uz": "Orto Balance" },
+    "description": {
+      "ru": "Баланс мягкости и жёсткости с ортопедическим ядром.",
+      "uz": "Yumshoqlik va qattiqlik balansi ortopedik yadro bilan."
+    },
+    "img": "/images/orthopedic/8.jpg",
+    "rating": 4,
+    "price": 1750000
+  },
+  {
+    "id": 9,
+    "category": "orthopedic",
+    "name": { "ru": "Firm Zone", "uz": "Firm Zone" },
+    "description": {
+      "ru": "Зональный матрас с разной плотностью для спины и таза.",
+      "uz": "Orqa va bel uchun turli zichlikdagi zonali matras."
+    },
+    "img": "/images/orthopedic/9.jpg",
+    "rating": 5,
+    "price": 2400000
+  },
+  {
+    "id": 10,
+    "category": "orthopedic",
+    "name": { "ru": "Orto Line", "uz": "Orto Line" },
+    "description": {
+      "ru": "Ортопедическая поддержка и дышащий материал.",
+      "uz": "Ortopedik qo‘llab-quvvatlovchi va nafas oluvchi material."
+    },
+    "img": "/images/orthopedic/10.jpg",
     "rating": 4,
     "price": 1600000
   },
   {
-    "id": 9,
-    "name": "Bio Balance",
-    "img": "https://i.ibb.co/nBv845V/m9.jpg",
-    "description": "Tabiiy materiallar asosida tayyorlangan ekologik matras.",
+    "id": 11,
+    "category": "orthopedic",
+    "name": { "ru": "Orto Duo", "uz": "Orto Duo" },
+    "description": {
+      "ru": "Двусторонний матрас с разной жёсткостью сторон.",
+      "uz": "Ikki tomonlama turli qattiqlikdagi matras."
+    },
+    "img": "/images/orthopedic/11.jpg",
+    "rating": 5,
+    "price": 2250000
+  },
+  {
+    "id": 12,
+    "category": "orthopedic",
+    "name": { "ru": "Orto Grand", "uz": "Orto Grand" },
+    "description": {
+      "ru": "Большая высота и усиленная ортопедическая структура.",
+      "uz": "Katta balandlik va mustahkam ortopedik tuzilma."
+    },
+    "img": "/images/orthopedic/12.jpg",
     "rating": 5,
     "price": 2600000
   },
   {
-    "id": 10,
-    "name": "MaxRelax Pro",
-    "img": "https://i.ibb.co/3f7BZY4/m10.jpg",
-    "description": "Katta vazn uchun mo‘ljallangan kuchaytirilgan model.",
-    "rating": 5,
-    "price": 3100000
-  },
-
-  {
-    "id": 11,
-    "name": "SoftCloud",
-    "img": "https://i.ibb.co/ZfJsmVh/m11.jpg",
-    "description": "Yumshoq bulutga o‘xshash maksimal qulaylik beradi.",
+    "id": 13,
+    "category": "orthopedic",
+    "name": { "ru": "Hard Medic", "uz": "Hard Medic" },
+    "description": {
+      "ru": "Очень жёсткий медико-ортопедический матрас.",
+      "uz": "Juda qattiq tibbiy ortopedik matras."
+    },
+    "img": "/images/orthopedic/13.jpg",
     "rating": 4,
     "price": 1700000
   },
   {
-    "id": 12,
-    "name": "OrthoCare",
-    "img": "https://i.ibb.co/SKwMvKj/m12.jpg",
-    "description": "Bel og‘rig‘i uchun ortopedik qo‘llab-quvvatlovchi qatlam.",
-    "rating": 5,
-    "price": 2400000
-  },
-  {
-    "id": 13,
-    "name": "Titan Spring",
-    "img": "https://i.ibb.co/6RNtDC4/m13.jpg",
-    "description": "Prujinali bo‘limda titan mustahkamlovchi qatlam bor.",
-    "rating": 5,
-    "price": 3500000
-  },
-    {
-        "id": 14,
-        "name": "Memory Comfort",
-        "img": "https://i.ibb.co/7Y6y2cD/m14.jpg",
-        "description": "Memory Foam va ortopedik qatlamlarning mukammal kombinatsiyasi.",
-        "rating": 4,
-        "price": 2800000
+    "id": 14,
+    "category": "orthopedic",
+    "name": { "ru": "Pro Spine", "uz": "Pro Spine" },
+    "description": {
+      "ru": "Создан для правильной поддержки позвоночника во сне.",
+      "uz": "Uyqu vaqtida umurtqani to‘g‘ri qo‘llab-quvvatlash uchun yaratilgan."
     },
-  {
-    "id": 15,
-    "name": "AirFlow Pro",
-    "img": "https://i.ibb.co/GJ3q4Sm/m15.jpg",
-    "description": "Ventilyatsiya teshiklari bilan sovuq tutuvchi konstruktsiya.",
-    "rating": 4,
-    "price": 2200000
+    "img": "/images/orthopedic/14.jpg",
+    "rating": 5,
+    "price": 2500000
   },
-
+   {
+    "id": 15,
+    "category": "anatomic",
+    "name": { "ru": "Анатомик Relax", "uz": "Anatomik Relax" },
+    "description": {
+      "ru": "Анатомическая поверхность, повторяющая форму тела.",
+      "uz": "Tana shaklini takrorlaydigan anatomik sirt."
+    },
+    "img": "/images/anatomic/1.jpg",
+    "rating": 5,
+    "price": 1900000
+  },
   {
     "id": 16,
-    "name": "Relax Extra",
-    "img": "https://i.ibb.co/4RGG7v5/m16.jpg",
-    "description": "Kundalik hamda uzoq muddatli ishlatishga qulay.",
-    "rating": 5,
-    "price": 2000000
+    "category": "anatomic",
+    "name": { "ru": "Anatomic Line", "uz": "Anatomic Line" },
+    "description": {
+      "ru": "Матрас плавно принимает форму позвоночника.",
+      "uz": "Matras umurtqa shaklini yumshoq qabul qiladi."
+    },
+    "img": "/images/anatomic/2.jpg",
+    "rating": 4,
+    "price": 1750000
   },
   {
     "id": 17,
-    "name": "Grand Ortho",
-    "img": "https://i.ibb.co/Srrhq1Y/m17.jpg",
-    "description": "Belga ortopedik yordam beruvchi premium matras.",
+    "category": "anatomic",
+    "name": { "ru": "Body Shape", "uz": "Body Shape" },
+    "description": {
+      "ru": "Создан для идеального распределения давления.",
+      "uz": "Bosimni ideal taqsimlash uchun yaratilgan."
+    },
+    "img": "/images/anatomic/3.jpg",
     "rating": 5,
-    "price": 3600000
+    "price": 2200000
   },
   {
     "id": 18,
-    "name": "Mega Spring",
-    "img": "https://i.ibb.co/S5VmZ1m/m18.jpg",
-    "description": "Kuchaytirilgan prujina bloki bilan mustahkam.",
+    "category": "anatomic",
+    "name": { "ru": "Anatomic Fresh", "uz": "Anatomic Fresh" },
+    "description": {
+      "ru": "Матрас с охлаждающим эффектом и анатомической поддержкой.",
+      "uz": "Sovutuvchi effektli anatomik qo‘llab-quvvatlovchi matras."
+    },
+    "img": "/images/anatomic/4.jpg",
     "rating": 4,
-    "price": 2500000
+    "price": 2000000
   },
   {
     "id": 19,
-    "name": "Memory Ultra",
-    "img": "https://i.ibb.co/rmhqfCf/m19.jpg",
-    "description": "Tanaga moslashuvchi yuqori texnologik Memory Foam.",
+    "category": "anatomic",
+    "name": { "ru": "Bio Anatomic", "uz": "Bio Anatomik" },
+    "description": {
+      "ru": "Экологичные материалы и мягкая анатомическая структура.",
+      "uz": "Ekologik materiallar va yumshoq anatomik tuzilma."
+    },
+    "img": "/images/anatomic/5.jpg",
     "rating": 5,
-    "price": 3300000
+    "price": 2450000
   },
   {
     "id": 20,
-    "name": "Premium Soft",
-    "img": "https://i.ibb.co/RQCnnBf/m20.jpg",
-    "description": "Yumshoq qatlamli, hushbo‘y to‘qima bilan qoplangan.",
-    "rating": 4,
-    "price": 2100000
-  },
-
-  {
-    "id": 21,
-    "name": "EcoFoam",
-    "img": "https://i.ibb.co/wzXkSn4/m21.jpg",
-    "description": "Ekologik toza materiallardan tayyorlangan yengil model.",
+    "category": "anatomic",
+    "name": { "ru": "Energy Soft", "uz": "Energy Soft" },
+    "description": {
+      "ru": "Ультрамягкий матрас для полного расслабления мышц.",
+      "uz": "Mushaklarni to‘liq bo‘shashtiruvchi juda yumshoq matras."
+    },
+    "img": "/images/anatomic/6.jpg",
     "rating": 4,
     "price": 1600000
   },
   {
-    "id": 22,
-    "name": "Strong Support",
-    "img": "https://i.ibb.co/ZJm9n04/m22.jpg",
-    "description": "Belni mustahkam ushlab turadigan qatlamli ortopedik matras.",
+    "id": 21,
+    "category": "anatomic",
+    "name": { "ru": "Dream Sense", "uz": "Dream Sense" },
+    "description": {
+      "ru": "Анатомическая адаптация к телу во время сна.",
+      "uz": "Uyqu vaqtida tanaga moslashuvchi anatomik moslashuv."
+    },
+    "img": "/images/anatomic/7.jpg",
     "rating": 5,
-    "price": 3000000
-  },
-  {
-    "id": 23,
-    "name": "Relax Duo",
-    "img": "https://i.ibb.co/nDd0gSG/m23.jpg",
-    "description": "2 tomonlama qulay — bir tomoni yumshoq, biri qattiq.",
-    "rating": 4,
-    "price": 1900000
-  },
-  {
-    "id": 24,
-    "name": "GoldLine Premium",
-    "img": "https://i.ibb.co/Mk4BfM7/m24.jpg",
-    "description": "Premium segmentdagi yuqori sifatli model.",
-    "rating": 5,
-    "price": 3800000
-  },
-  {
-    "id": 25,
-    "name": "High Density Pro",
-    "img": "https://i.ibb.co/4MBGQ6q/m25.jpg",
-    "description": "Zichligi juda yuqori bo‘lgan penali model.",
-    "rating": 5,
-    "price": 3400000
-  },
-
-  {
-    "id": 26,
-    "name": "Thermo Balance",
-    "img": "https://i.ibb.co/47Sz8d8/m26.jpg",
-    "description": "Issiqlikni teng ushlovchi maxsus qatlam texnologiyasi.",
-    "rating": 4,
-    "price": 2400000
-  },
-  {
-    "id": 27,
-    "name": "Ortho Master",
-    "img": "https://i.ibb.co/ysQnqmd/m27.jpg",
-    "description": "Professional ortopedlar tavsiya etgan model.",
-    "rating": 5,
-    "price": 3900000
-  },
-  {
-    "id": 28,
-    "name": "Eco Spring",
-    "img": "https://i.ibb.co/SmsnKdP/m28.jpg",
-    "description": "Tabiiy materiallar + prujina kombinatsiyasi.",
-    "rating": 4,
     "price": 2100000
   },
   {
-    "id": 29,
-    "name": "MultiCare Foam",
-    "img": "https://i.ibb.co/34BHXRM/m29.jpg",
-    "description": "Orqa va bo‘yinga mukammal moslashuvchi matras.",
+    "id": 22,
+    "category": "anatomic",
+    "name": { "ru": "Soft Body Pro", "uz": "Soft Body Pro" },
+    "description": {
+      "ru": "Мягкая поверхность и глубокая анатомическая поддержка.",
+      "uz": "Yumshoq sirt va chuqur anatomik qo‘llab-quvvatlash."
+    },
+    "img": "/images/anatomic/8.jpg",
+    "rating": 4,
+    "price": 1700000
+  },
+  {
+    "id": 23,
+    "category": "anatomic",
+    "name": { "ru": "Ultra Anatomic", "uz": "Ultra Anatomic" },
+    "description": {
+      "ru": "Максимальная гибкость и комфорт тела.",
+      "uz": "Tana uchun maksimal moslashuvchanlik va qulaylik."
+    },
+    "img": "/images/anatomic/9.jpg",
+    "rating": 5,
+    "price": 2600000
+  },
+  {
+    "id": 24,
+    "category": "anatomic",
+    "name": { "ru": "Body Flex Air", "uz": "Body Flex Air" },
+    "description": {
+      "ru": "Система вентиляции с анатомической конструкцией.",
+      "uz": "Ventilyatsiya tizimli anatomik konstruktsiya."
+    },
+    "img": "/images/anatomic/10.jpg",
+    "rating": 4,
+    "price": 1850000
+  },
+  {
+    "id": 25,
+    "category": "anatomic",
+    "name": { "ru": "Anatomic Lite", "uz": "Anatomic Lite" },
+    "description": {
+      "ru": "Лёгкий анатомический матрас для ежедневного отдыха.",
+      "uz": "Yengil anatomik matras, kundalik dam olish uchun."
+    },
+    "img": "/images/anatomic/11.jpg",
+    "rating": 4,
+    "price": 1450000
+  },
+  {
+    "id": 26,
+    "category": "anatomic",
+    "name": { "ru": "Relax Point", "uz": "Relax Point" },
+    "description": {
+      "ru": "Матрас с точечной анатомической поддержкой.",
+      "uz": "Nuqtali anatomik qo‘llab-quvvatlovchi matras."
+    },
+    "img": "/images/anatomic/12.jpg",
+    "rating": 5,
+    "price": 2150000
+  },
+  {
+    "id": 27,
+    "category": "anatomic",
+    "name": { "ru": "Smooth Body", "uz": "Smooth Body" },
+    "description": {
+      "ru": "Мягкая поверхность и равномерное давление.",
+      "uz": "Yumshoq sirt va bir tekis bosim taqsimoti."
+    },
+    "img": "/images/anatomic/13.jpg",
+    "rating": 4,
+    "price": 1650000
+  },
+  {
+    "id": 28,
+    "category": "anatomic",
+    "name": { "ru": "Anatomic Grand", "uz": "Anatomic Grand" },
+    "description": {
+      "ru": "Высокий уровень анатомического расслабления и мягкости.",
+      "uz": "Yuqori anatomik bo'shashish va yumshoqlik darajasi."
+    },
+    "img": "/images/anatomic/14.jpg",
+    "rating": 5,
+    "price": 2800000
+  },
+  {
+    "id": 101,
+    "category": "memory",
+    "name": { "ru": "Memory Foam Classic", "uz": "Memory Foam Classic" },
+    "description": {
+      "ru": "Классический матрас с плотным Memory Foam слоем. Поддержка спины и комфорт.",
+      "uz": "Klassik matras zich Memory Foam qatlami bilan. Belga yaxshi tayanch va qulaylik."
+    },
+    "img": "https://i.ibb.co/80cwx0J/m2.jpg",
+    "rating": 5,
+    "price": 2100000
+  },
+  {
+    "id": 102,
+    "category": "memory",
+    "name": { "ru": "Memory Relax Pro", "uz": "Memory Relax Pro" },
+    "description": {
+      "ru": "Улучшенный Memory Foam с эффектом облака. Расслабляет мышцы.",
+      "uz": "Takomillashtirilgan Memory Foam bulut effektiga ega. Mushaklarni bo‘shashtiradi."
+    },
+    "img": "https://i.ibb.co/0VBJXH8/m4.jpg",
+    "rating": 4,
+    "price": 2500000
+  },
+  {
+    "id": 103,
+    "category": "memory",
+    "name": { "ru": "Memory Comfort Air", "uz": "Memory Comfort Air" },
+    "description": {
+      "ru": "Дышащий Memory Foam с охлаждающим эффектом.",
+      "uz": "Nafas oluvchi Memory Foam sovutuvchi effekt bilan."
+    },
+    "img": "https://i.ibb.co/XbGrymt/m5.jpg",
     "rating": 5,
     "price": 2700000
   },
   {
-    "id": 30,
-    "name": "Soft Premium Lux",
-    "img": "https://i.ibb.co/y6VHtXR/m30.jpg",
-    "description": "Juda yumshoq, premium uyqu sifati uchun ishlab chiqilgan.",
+    "id": 104,
+    "category": "memory",
+    "name": { "ru": "Memory Soft Deluxe", "uz": "Memory Soft Deluxe" },
+    "description": {
+      "ru": "Мягкий Memory Foam для тех, кто любит максимальный комфорт.",
+      "uz": "Juda yumshoq Memory Foam maksimal qulaylikni sevuvchilar uchun."
+    },
+    "img": "https://i.ibb.co/FJFHyq1/m6.jpg",
+    "rating": 4,
+    "price": 2400000
+  },
+  {
+    "id": 105,
+    "category": "memory",
+    "name": { "ru": "Memory Orthopedic Mix", "uz": "Memory Orthopedic Mix" },
+    "description": {
+      "ru": "Смешанная структура Memory Foam + ортопедическая поддержка.",
+      "uz": "Memory Foam va ortopedik qatlamli aralash tuzilma."
+    },
+    "img": "https://i.ibb.co/pKys8km/m7.jpg",
     "rating": 5,
+    "price": 2850000
+  },
+  {
+    "id": 106,
+    "category": "memory",
+    "name": { "ru": "Memory Double Layer", "uz": "Memory Double Layer" },
+    "description": {
+      "ru": "Двойной слой Memory Foam для улучшенной поддержки тела.",
+      "uz": "Ikki qavat Memory Foam tanaga yaxshiroq moslashadi."
+    },
+    "img": "https://i.ibb.co/N7mzK6J/m8.jpg",
+    "rating": 4,
+    "price": 2600000
+  },
+  {
+    "id": 107,
+    "category": "memory",
+    "name": { "ru": "Memory Hybrid Comfort", "uz": "Memory Hybrid Comfort" },
+    "description": {
+      "ru": "Гибридный вариант Memory Foam + дышащий слой.",
+      "uz": "Hybrid variant: Memory Foam + nafas oluvchi qatlam."
+    },
+    "img": "https://i.ibb.co/3Yf2YgZ/m9.jpg",
+    "rating": 5,
+    "price": 2950000
+  },
+  {
+    "id": 108,
+    "category": "memory",
+    "name": { "ru": "Memory Cool Touch", "uz": "Memory Cool Touch" },
+    "description": {
+      "ru": "Покрытие с охлаждением, идеальный вариант для лета.",
+      "uz": "Sovuqlik beruvchi qoplama — yoz uchun ideal."
+    },
+    "img": "https://i.ibb.co/Px1qB2t/m10.jpg",
+    "rating": 3,
+    "price": 2200000
+  },
+  {
+    "id": 109,
+    "category": "memory",
+    "name": { "ru": "Memory Therapeutic", "uz": "Memory Therapeutic" },
+    "description": {
+      "ru": "Терапевтический Memory Foam для восстановления позвоночника.",
+      "uz": "Umurtqa tiklanishi uchun terapevtik Memory Foam."
+    },
+    "img": "https://i.ibb.co/sb8b9XQ/m11.jpg",
+    "rating": 5,
+    "price": 3300000
+  },
+  {
+    "id": 110,
+    "category": "memory",
+    "name": { "ru": "Memory Ultra Soft", "uz": "Memory Ultra Soft" },
+    "description": {
+      "ru": "Ультра мягкий, приятный и расслабляющий.",
+      "uz": "Ultra yumshoq va yoqimli, dam beruvchi matras."
+    },
+    "img": "https://i.ibb.co/3fFxJZ6/m12.jpg",
+    "rating": 4,
+    "price": 2450000
+  },
+  {
+    "id": 111,
+    "category": "memory",
+    "name": { "ru": "Memory Firm Support", "uz": "Memory Firm Support" },
+    "description": {
+      "ru": "Плотный Memory Foam с жесткой поддержкой корпуса.",
+      "uz": "Qattiq tanani qo‘llash uchun zich Memory Foam."
+    },
+    "img": "https://i.ibb.co/ydKjsmB/m13.jpg",
+    "rating": 5,
+    "price": 3100000
+  },
+  {
+    "id": 112,
+    "category": "memory",
+    "name": { "ru": "Memory Elite Airflow", "uz": "Memory Elite Airflow" },
+    "description": {
+      "ru": "Элитный матрас с максимальной вентиляцией.",
+      "uz": "Eng yuqori darajada ventilyatsiyaga ega elit matras."
+    },
+    "img": "https://i.ibb.co/W6rVjpy/m14.jpg",
+    "rating": 4,
     "price": 3500000
+  },
+  {
+    "id": 113,
+    "category": "memory",
+    "name": { "ru": "Memory Fresh Line", "uz": "Memory Fresh Line" },
+    "description": {
+      "ru": "Антибактериальный Memory Foam с охлаждением.",
+      "uz": "Antibakterial Memory Foam sovutuvchi funksiya bilan."
+    },
+    "img": "https://i.ibb.co/S7QzBt7/m15.jpg",
+    "rating": 4,
+    "price": 2650000
+  },
+  {
+    "id": 114,
+    "category": "memory",
+    "name": { "ru": "Memory Dream Rest", "uz": "Memory Dream Rest" },
+    "description": {
+      "ru": "Максимально удобный вариант для глубокого сна.",
+      "uz": "Chuqur uyqu uchun maksimal qulaylikni beruvchi model."
+    },
+    "img": "https://i.ibb.co/CQJ9JkV/m16.jpg",
+    "rating": 5,
+    "price": 2900000
+  },
+  {
+    "id": 301,
+    "category": "kids",
+    "name": { "ru": "Baby Soft", "uz": "Baby Soft" },
+    "description": {
+      "ru": "Мягкий детский матрас с гипоаллергенным покрытием.",
+      "uz": "Gipoallergen qoplamali yumshoq bolalar matrasi."
+    },
+    "img": "https://i.ibb.co/YyRPjH9/k1.jpg",
+    "rating": 5,
+    "price": 900000
+  },
+  {
+    "id": 302,
+    "category": "kids",
+    "name": { "ru": "Mini Comfort", "uz": "Mini Comfort" },
+    "description": {
+      "ru": "Матрас для новорождённых с ровной поддержкой спины.",
+      "uz": "Yangi tug‘ilganlar uchun orqani tekis qo‘llab turuvchi matras."
+    },
+    "img": "https://i.ibb.co/RTdr0tf/k2.jpg",
+    "rating": 4,
+    "price": 850000
+  },
+  {
+    "id": 303,
+    "category": "kids",
+    "name": { "ru": "Kids Dream", "uz": "Kids Dream" },
+    "description": {
+      "ru": "Комфортный детский матрас с безопасными материалами.",
+      "uz": "Bolalar uchun xavfsiz materiallardan tayyorlangan qulay matras."
+    },
+    "img": "https://i.ibb.co/6vcDTJw/k3.jpg",
+    "rating": 5,
+    "price": 1100000
+  },
+  {
+    "id": 304,
+    "category": "kids",
+    "name": { "ru": "Junior Relax", "uz": "Junior Relax" },
+    "description": {
+      "ru": "Оптимальная жесткость для растущего организма.",
+      "uz": "O‘sayotgan organizm uchun optimal qattiqlik."
+    },
+    "img": "https://i.ibb.co/hW3cK2t/k4.jpg",
+    "rating": 4,
+    "price": 1200000
+  },
+  {
+    "id": 305,
+    "category": "kids",
+    "name": { "ru": "Baby Protect", "uz": "Baby Protect" },
+    "description": {
+      "ru": "Гипоаллергенный слой защищает от раздражений.",
+      "uz": "Gipoallergen qatlam terini tirnashdan himoya qiladi."
+    },
+    "img": "https://i.ibb.co/KmKRt5b/k5.jpg",
+    "rating": 5,
+    "price": 1000000
+  },
+  {
+    "id": 306,
+    "category": "kids",
+    "name": { "ru": "Soft Junior", "uz": "Soft Junior" },
+    "description": {
+      "ru": "Мягкий, но поддерживающий детский матрас.",
+      "uz": "Yumshoq, ammo qo‘llab turuvchi bolalar matrasi."
+    },
+    "img": "https://i.ibb.co/fShKX6Q/k6.jpg",
+    "rating": 4,
+    "price": 1150000
+  },
+  {
+    "id": 307,
+    "category": "kids",
+    "name": { "ru": "Eco Kids", "uz": "Eco Kids" },
+    "description": {
+      "ru": "Экологически чистый наполнитель, безопасный для детей.",
+      "uz": "Bolalar uchun xavfsiz, ekologik toza to‘ldirgich."
+    },
+    "img": "https://i.ibb.co/n6NxJTC/k7.jpg",
+    "rating": 4,
+    "price": 1050000
+  },
+  {
+    "id": 308,
+    "category": "kids",
+    "name": { "ru": "Mini AirFlow", "uz": "Mini AirFlow" },
+    "description": {
+      "ru": "Хорошая вентиляция для комфортного сна ребёнка.",
+      "uz": "Bola uchun qulay uyquni ta’minlovchi yaxshi ventilyatsiya."
+    },
+    "img": "https://i.ibb.co/F6HX2T5/k8.jpg",
+    "rating": 3,
+    "price": 950000
+  },
+  {
+    "id": 309,
+    "category": "kids",
+    "name": { "ru": "Kids Balance", "uz": "Kids Balance" },
+    "description": {
+      "ru": "Сбалансированная жесткость для правильной осанки.",
+      "uz": "To‘g‘ri qomat shakllanishi uchun muvozanatli qattiqlik."
+    },
+    "img": "https://i.ibb.co/GFtq0kS/k9.jpg",
+    "rating": 5,
+    "price": 1250000
+  },
+  {
+    "id": 310,
+    "category": "kids",
+    "name": { "ru": "Baby Sleep Pro", "uz": "Baby Sleep Pro" },
+    "description": {
+      "ru": "Предотвращает проваливание и обеспечивает ровный сон.",
+      "uz": "Cho‘kib ketishni oldini oladi va tekis uyqu beradi."
+    },
+    "img": "https://i.ibb.co/TKQ6SbR/k10.jpg",
+    "rating": 4,
+    "price": 1300000
+  },
+  {
+    "id": 311,
+    "category": "kids",
+    "name": { "ru": "Junior Strong", "uz": "Junior Strong" },
+    "description": {
+      "ru": "Усиленный слой для активных детей.",
+      "uz": "Faol bolalar uchun mustahkamlangan qatlam."
+    },
+    "img": "https://i.ibb.co/cCN0w9J/k11.jpg",
+    "rating": 5,
+    "price": 1400000
+  },
+  {
+    "id": 312,
+    "category": "kids",
+    "name": { "ru": "Kids Health", "uz": "Kids Health" },
+    "description": {
+      "ru": "Поддерживает позвоночник во время сна.",
+      "uz": "Uyqu vaqtida umurtqa pog‘onasini qo‘llab turadi."
+    },
+    "img": "https://i.ibb.co/fGmpc07/k12.jpg",
+    "rating": 4,
+    "price": 1350000
+  },
+  {
+    "id": 313,
+    "category": "kids",
+    "name": { "ru": "Eco Junior Pro", "uz": "Eco Junior Pro" },
+    "description": {
+      "ru": "Безопасные экологичные материалы и хорошая вентиляция.",
+      "uz": "Xavfsiz ekologik materiallar va yaxshi ventilyatsiya."
+    },
+    "img": "https://i.ibb.co/dk5289v/k13.jpg",
+    "rating": 5,
+    "price": 1450000
+  },
+  {
+    "id": 314,
+    "category": "kids",
+    "name": { "ru": "Happy Kids", "uz": "Happy Kids" },
+    "description": {
+      "ru": "Комфортная модель с мягким внешним покрытием.",
+      "uz": "Yumshoq tashqi qoplamaga ega qulay model."
+    },
+    "img": "https://i.ibb.co/G05836P/k14.jpg",
+    "rating": 4,
+    "price": 1250000
+  },
+  {
+    "id": 201,
+    "category": "springless",
+    "name": { "ru": "SoftFlex Безпружинный", "uz": "SoftFlex Bepurujin" },
+    "description": {
+      "ru": "Мягкий беспружинный матрас с ровной поддержкой тела.",
+      "uz": "Yumshoq, tanani bir tekis qo‘llab turuvchi besprujinali matras."
+    },
+    "img": "https://i.ibb.co/S1gqv6s/s1.jpg",
+    "rating": 4,
+    "price": 1600000
+  },
+  {
+    "id": 202,
+    "category": "springless",
+    "name": { "ru": "Ultra Foam Line", "uz": "Ultra Foam Line" },
+    "description": {
+      "ru": "Плотный пеноматериал с высокой износостойкостью.",
+      "uz": "Yuqori zichlikdagi uzoq xizmat qiluvchi ko‘pik materiali."
+    },
+    "img": "https://i.ibb.co/WVw8PqH/s2.jpg",
+    "rating": 5,
+    "price": 1850000
+  },
+  {
+    "id": 203,
+    "category": "springless",
+    "name": { "ru": "Relax Foam Comfort", "uz": "Relax Foam Comfort" },
+    "description": {
+      "ru": "Комфортная модель под людей, предпочитающих мягкость.",
+      "uz": "Yumshoqlikni yoqtiradiganlar uchun maxsus ishlab chiqilgan model."
+    },
+    "img": "https://i.ibb.co/ZM3J8ng/s3.jpg",
+    "rating": 3,
+    "price": 1500000
+  },
+  {
+    "id": 204,
+    "category": "springless",
+    "name": { "ru": "AirFlow Lite", "uz": "AirFlow Lite" },
+    "description": {
+      "ru": "Хорошая циркуляция воздуха, лёгкая конструкция.",
+      "uz": "Yaxshi havo aylanishi va engil konstruktsiya."
+    },
+    "img": "https://i.ibb.co/Xppp1nv/s4.jpg",
+    "rating": 4,
+    "price": 1750000
+  },
+  {
+    "id": 205,
+    "category": "springless",
+    "name": { "ru": "Foam Balance", "uz": "Foam Balance" },
+    "description": {
+      "ru": "Сбалансированная жесткость подходит для всех типов сна.",
+      "uz": "Muvozanatli qattiqlik barcha uyqu turlari uchun mos."
+    },
+    "img": "https://i.ibb.co/WGsy9J4/s5.jpg",
+    "rating": 5,
+    "price": 2000000
+  },
+  {
+    "id": 206,
+    "category": "springless",
+    "name": { "ru": "MonoFoam Base", "uz": "MonoFoam Base" },
+    "description": {
+      "ru": "Беспружинный базовый матрас с плотной поддержкой.",
+      "uz": "Qattiqroq qo‘llov beruvchi bazaviy besprujinali matras."
+    },
+    "img": "https://i.ibb.co/6BRQFjr/s6.jpg",
+    "rating": 4,
+    "price": 1400000
+  },
+  {
+    "id": 207,
+    "category": "springless",
+    "name": { "ru": "Foam Duo Comfort", "uz": "Foam Duo Comfort" },
+    "description": {
+      "ru": "Двухслойная структура обеспечивает оптимальную поддержку.",
+      "uz": "Ikki qavatli tuzilma optimal qo‘llab-quvvatlashni beradi."
+    },
+    "img": "https://i.ibb.co/G7L2wvQ/s7.jpg",
+    "rating": 5,
+    "price": 2300000
+  },
+  {
+    "id": 208,
+    "category": "springless",
+    "name": { "ru": "AirSoft Premium", "uz": "AirSoft Premium" },
+    "description": {
+      "ru": "Премиальная мягкость без проседания.",
+      "uz": "Cho‘kmasdan premium yumshoqlik."
+    },
+    "img": "https://i.ibb.co/wz1pnPr/s8.jpg",
+    "rating": 4,
+    "price": 2600000
+  },
+  {
+    "id": 209,
+    "category": "springless",
+    "name": { "ru": "Comfort Flat Pro", "uz": "Comfort Flat Pro" },
+    "description": {
+      "ru": "Идеально ровная поверхность для правильного положения тела.",
+      "uz": "Tanani to‘g‘ri holatda ushlab turuvchi tekis sirt."
+    },
+    "img": "https://i.ibb.co/nLzT3Zc/s9.jpg",
+    "rating": 5,
+    "price": 2200000
+  },
+  {
+    "id": 210,
+    "category": "springless",
+    "name": { "ru": "Foam Strong Line", "uz": "Foam Strong Line" },
+    "description": {
+      "ru": "Усиленный каркас и плотный наполнитель.",
+      "uz": "Kuchaytirilgan karkas va zich to‘ldirgich."
+    },
+    "img": "https://i.ibb.co/kcnbtQ4/s10.jpg",
+    "rating": 5,
+    "price": 2800000
+  },
+  {
+    "id": 211,
+    "category": "springless",
+    "name": { "ru": "EcoFoam Basic", "uz": "EcoFoam Basic" },
+    "description": {
+      "ru": "Экологичный и легкий беспружинный вариант.",
+      "uz": "Ekologik toza va yengil besprujinali model."
+    },
+    "img": "https://i.ibb.co/3CpXFC6/s11.jpg",
+    "rating": 3,
+    "price": 1350000
+  },
+  {
+    "id": 212,
+    "category": "springless",
+    "name": { "ru": "Hard Foam Support", "uz": "Hard Foam Support" },
+    "description": {
+      "ru": "Жесткий беспружинный матрас для спины.",
+      "uz": "Bel uchun qattiqroq qo‘llab turuvchi matras."
+    },
+    "img": "https://i.ibb.co/NstqMpz/s12.jpg",
+    "rating": 4,
+    "price": 2100000
+  },
+  {
+    "id": 213,
+    "category": "springless",
+    "name": { "ru": "FlatRest Comfort", "uz": "FlatRest Comfort" },
+    "description": {
+      "ru": "Добротный повседневный матрас без пружин.",
+      "uz": "Har kunlik foydalanish uchun yaxshi besprujinali matras."
+    },
+    "img": "https://i.ibb.co/GVkm4qv/s13.jpg",
+    "rating": 4,
+    "price": 1900000
+  },
+  {
+    "id": 214,
+    "category": "springless",
+    "name": { "ru": "AirLite Foam", "uz": "AirLite Foam" },
+    "description": {
+      "ru": "Легкая модель с хорошей воздухопроницаемостью.",
+      "uz": "Havo o‘tkazuvchanligi yaxshi bo‘lgan yengil model."
+    },
+    "img": "https://i.ibb.co/Z1CwxT1/s14.jpg",
+    "rating": 3,
+    "price": 1650000
   }
 ]
