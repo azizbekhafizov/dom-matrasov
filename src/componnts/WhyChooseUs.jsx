@@ -82,7 +82,12 @@ export default function WhyChooseUsSection() {
             {t("why.showroom.desc")}
           </p>
 
-          <button className="mt-8 px-8 py-3 border-2 border-white text-primary font-semibold rounded-full shadow-lg hover:bg-primary hover:text-white transition-all duration-300 hover:scale-105 active:scale-95">
+          <button
+            onClick={() =>
+              window.open("https://maps.app.goo.gl/D5e3HwteToBmB18e8", "_blank")
+            }
+            className="mt-8 px-8 py-3 border-2 border-white text-primary font-semibold rounded-full shadow-lg hover:bg-primary hover:text-white transition-all duration-300 hover:scale-105 active:scale-95"
+          >
             {t("why.showroom.button")}
           </button>
         </div>

@@ -9,11 +9,12 @@ export default function About() {
     <section id="about" className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-center items-center gap-12">
         {/* Image */}
-        <div
-          className="w-full md:w-1/2"
-          aria-label={t("about.imageAlt")}
-        >
-          <img className="rounded-xl shadow-lg" src={matImg} alt={t("about.imageAlt")} />
+        <div className="w-full md:w-1/2" aria-label={t("about.imageAlt")}>
+          <img
+            className="rounded-xl shadow-lg"
+            src={matImg}
+            alt={t("about.imageAlt")}
+          />
         </div>
 
         {/* Text content */}
@@ -24,7 +25,13 @@ export default function About() {
           <p className="text-base font-normal leading-relaxed">
             {t("about.description")}
           </p>
-          <button className="flex items-center justify-center min-w-[100px] max-w-[200px] h-12 px-6 bg-gradient-to-r from-blue-600 to-indigo-500 text-white font-bold text-base rounded-xl shadow-lg hover:scale-105 hover:shadow-xl transition-transform duration-300">
+          <button
+            onClick={() => {
+              const element = document.getElementById("types");
+              element?.scrollIntoView({ behavior: "smooth" });
+            }}
+            className="flex items-center justify-center min-w-[100px] max-w-[200px] h-12 px-6 bg-gradient-to-r from-blue-600 to-indigo-500 text-white font-bold text-base rounded-xl shadow-lg hover:scale-105 hover:shadow-xl transition-transform duration-300"
+          >
             {t("about.button")}
           </button>
         </div>
