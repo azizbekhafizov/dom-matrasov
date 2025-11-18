@@ -24,18 +24,16 @@ export default function Navbar() {
   const navLinks = [
     { name: t("nav.home"), to: "hero", scroll: true },
     { name: t("nav.about"), to: "about", scroll: true },
-    { name: t("nav.products"), to: "/products", scroll: false },
+    { name: t("nav.products"), to: "products", scroll: false },
     { name: t("nav.contacts"), to: "contact", scroll: true },
   ];
 
   const onNavClick = (link) => {
     if (link.scroll) {
-      // Agar Home page bo'lsa scroll qilamiz
       if (location.pathname === "/") {
         const section = document.getElementById(link.to);
         if (section) section.scrollIntoView({ behavior: "smooth" });
       } else {
-        // Boshqa sahifadan Home pagega o'tib scroll qilamiz
         navigate("/");
         setTimeout(() => {
           const section = document.getElementById(link.to);
@@ -43,7 +41,6 @@ export default function Navbar() {
         }, 150);
       }
     } else {
-      // Products sahifasiga route
       navigate(link.to);
     }
     setMenuOpen(false);
@@ -68,7 +65,6 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* DESKTOP MENU */}
         <ul className="hidden lg:flex items-center gap-10 text-white/90 font-medium">
           {navLinks.map((link) => (
             <li key={link.name}>
@@ -83,7 +79,6 @@ export default function Navbar() {
           ))}
         </ul>
 
-        {/* RIGHT SIDE: Order + Lang */}
         <div className="hidden md:flex items-center gap-4">
           <a
             href="#contact"
@@ -116,7 +111,6 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* MOBILE MENU BUTTON */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
           className="md:hidden p-2 rounded-md text-white border border-white/20"
@@ -125,7 +119,6 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* MOBILE MENU */}
       <div
         className={`md:hidden overflow-hidden bg-[#0d1b2a] text-white transition-all duration-300 ${
           menuOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"

@@ -5,7 +5,6 @@ import Navbar from "./componnts/Navbar";
 import Hero from "./componnts/Hero";
 import About from "./componnts/About";
 import WhyChooseUs from "./componnts/WhyChooseUs";
-import Showroom from "./componnts/Showroom";
 import Contact from "./componnts/Contact";
 import Footer from "./componnts/Footer";
 import Loading from "./componnts/Loading";
@@ -49,12 +48,11 @@ function App() {
                   <About />
                   <WhyChooseUs />
                   <Types />
-                  <Showroom />
                   <Contact />
+                  <Products />
                 </>
               }
             />
-            <Route path="/products" element={<Products />} />
           </Routes>
           <Footer />
         </div>

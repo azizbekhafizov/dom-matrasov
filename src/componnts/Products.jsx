@@ -1,202 +1,198 @@
-import { useEffect, useState, useMemo } from "react";
-import { Star, ShoppingCart, ArrowRight } from "lucide-react";
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import productsData from "../data/products.json"; // 70 ta product
+
+const products = {
+  memory: [
+    {
+      id: 1,
+      name: "Memory Classic",
+      img: "src/assets/images/memory1.webp",
+      desc: "Zich Memory Foam qatlami bilan yumshoq va qulay uyqu...",
+      price: "2 100 000",
+    },
+    {
+      id: 2,
+      name: "Memory Airflow",
+      img: "src/assets/images/memory2.jpg",
+      desc: "Nafas oluvchi texnologiya, issiq yozda ham salqinlik...",
+      price: "2 350 000",
+    },
+    {
+      id: 3,
+      name: "Memory Soft Touch",
+      img: "src/assets/images/memory3.jpg",
+      desc: "Juda yumshoq qoplama, og‘irlikni teng taqsimlaydi...",
+      price: "2 500 000",
+    },
+    {
+      id: 4,
+      name: "Memory Premium",
+      img: "src/assets/images/memory4.avif",
+      desc: "Premium segment – yuqori zichlikdagi Memory Foam...",
+      price: "3 000 000",
+    },
+  ],
+
+  orthopedic: [
+    {
+      id: 5,
+      name: "Ortho Hard",
+      img: "src/assets/images/ortopedik1.jpg",
+      desc: "Qattiq ortopedik qatlami bilan sog‘lom umurtqa uchun...",
+      price: "1 900 000",
+    },
+    {
+      id: 6,
+      name: "Ortho Pro",
+      img: "src/assets/images/ortopedik2.jpg",
+      desc: "Katta vazn uchun moslangan kuchaytirilgan ortopedik qatlam...",
+      price: "2 400 000",
+    },
+    {
+      id: 7,
+      name: "Ortho Soft",
+      img: "src/assets/images/ortopedik3.webp",
+      desc: "Egiluvchan, ammo ortopedik qo‘llab-quvvatlashga ega...",
+      price: "2 150 000",
+    },
+    {
+      id: 8,
+      name: "Ortho Premium",
+      img: "src/assets/images/ortopedik4.jpg",
+      desc: "Premium darajadagi ortopedik qatlam, uzoq muddat xizmat qiladi...",
+      price: "2 900 000",
+    },
+  ],
+
+  kids: [
+    {
+      id: 9,
+      name: "Kids Comfort",
+      img: "src/assets/images/detskiy1.jpg",
+      desc: "Bolalar uchun maxsus hipoallergen matras...",
+      price: "1 200 000",
+    },
+    {
+      id: 10,
+      name: "Kids Soft",
+      img: "src/assets/images/detskiy2.jpg",
+      desc: "Yumshoq va xavfsiz, o‘smirlar uchun ideal matras...",
+      price: "1 350 000",
+    },
+    {
+      id: 11,
+      name: "Kids Hard",
+      img: "src/assets/images/detskiy3.jpg",
+      desc: "Qattiqroq qatlam – umurtqa rivoji uchun foydali...",
+      price: "1 500 000",
+    },
+    {
+      id: 12,
+      name: "Kids Premium",
+      img: "src/assets/images/detskiy4.jpg",
+      desc: "Havo o‘tkazuvchi qoplama – bolalar uchun eng yaxshi variant...",
+      price: "1 800 000",
+    },
+  ],
+};
 
 export default function Products() {
-  const { i18n, t } = useTranslation();
-  const currentLang = i18n.language || "ru";
+  const [modalOpen, setModalOpen] = useState(false);
+  const [selected, setSelected] = useState(null);
+  const { t } = useTranslation();
 
-  const [products, setProducts] = useState([]);
-  const [search, setSearch] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState("all");
-  const [page, setPage] = useState(1);
-  const perPage = 9; // products per page
-
-  // Load products
-  useEffect(() => {
-    setTimeout(() => {
-      setProducts(productsData);
-    }, 500);
-  }, []);
-
-  // Kategoriyalar
-  const categories = useMemo(() => {
-    const cats = productsData.map((p) => p.category);
-    return ["all", ...Array.from(new Set(cats))];
-  }, []);
-
-  // Filter + search
-  const filteredProducts = useMemo(() => {
-    let result = products;
-    if (selectedCategory !== "all") {
-      result = result.filter((p) => p.category === selectedCategory);
-    }
-    if (search.trim()) {
-      result = result.filter((p) =>
-        p.name[currentLang].toLowerCase().includes(search.toLowerCase())
-      );
-    }
-    return result;
-  }, [products, selectedCategory, search, currentLang]);
-
-  // Pagination
-  const totalPages = Math.ceil(filteredProducts.length / perPage);
-  const paginatedProducts = useMemo(() => {
-    const start = (page - 1) * perPage;
-    return filteredProducts.slice(start, start + perPage);
-  }, [filteredProducts, page]);
+  const openModal = (product) => {
+    setSelected(product);
+    setModalOpen(true);
+  };
 
   return (
-    <section className="pt-28 pb-20 px-4 sm:px-6 lg:px-10 bg-gray-50 dark:bg-gray-900">
-      <div className="max-w-7xl mx-auto">
-        {/* Page Title */}
-        <h2 className="text-4xl md:text-5xl font-bold font-serif text-center mb-3">
-          {t("products.title", "Наши Матрасы")}
-        </h2>
-        <p className="text-center text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-8 text-lg">
-          {t(
-            "products.subtitle",
-            "Премиальные матрасы, разработанные для здоровья вашего позвоночника и комфортного сна"
-          )}
-        </p>
+    <section id="products" className="pt-24 pb-20 bg-gray-50 dark:bg-gray-900 px-6">
+      <h2 className="text-4xl font-bold text-center mb-12">
+        {t("products.title")}
+      </h2>
 
-        {/* Search + Categories */}
-        <div className="flex flex-col sm:flex-row items-center justify-between mb-10 gap-4">
-          <input
-            type="text"
-            placeholder={t("products.search", "Поиск матраса...")}
-            className="px-4 py-2 rounded-xl border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 w-full sm:w-1/3 bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-100"
-            value={search}
-            onChange={(e) => {
-              setSearch(e.target.value);
-              setPage(1);
-            }}
-          />
+      {Object.entries(products).map(([category, items]) => (
+        <div key={category} className="mb-16">
+          <h3 className="text-2xl font-semibold mb-6 capitalize">
+            {t(`products.${category}`)}
+          </h3>
 
-          <div className="flex gap-2 flex-wrap justify-center">
-            {categories.map((cat) => (
-              <button
-                key={cat}
-                onClick={() => {
-                  setSelectedCategory(cat.toLowerCase());
-                  setPage(1);
-                }}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition ${
-                  selectedCategory === cat.toLowerCase()
-                    ? "bg-blue-600 text-white"
-                    : "bg-white/10 dark:bg-gray-700 text-gray-800 dark:text-gray-100 hover:bg-blue-500/30"
-                }`}
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+            {items.map((item) => (
+              <div
+                key={item.id}
+                className="bg-white dark:bg-gray-800 rounded-2xl shadow hover:shadow-2xl transition group overflow-hidden"
               >
-                {cat.toUpperCase()}
-              </button>
+                {/* IMAGE */}
+                <div
+                  onClick={() => openModal(item)}
+                  className="relative cursor-pointer"
+                >
+                  <img
+                    src={item.img}
+                    className="h-40 w-full object-cover group-hover:scale-105 transition duration-300"
+                  />
+                </div>
+
+                {/* CARD BODY */}
+                <div className="p-4">
+                  <h4 className="text-lg font-semibold mb-1">{item.name}</h4>
+                  <p className="text-primary text-xl font-bold">{item.price} сум</p>
+
+                  <a
+                    href={`https://t.me/YOUR_TELEGRAM?text=Assalomu%20alaykum.%20Men%20"${item.name}"%20matrasiga%20buyurtma%20bermoqchiman.`}
+                    target="_blank"
+                    className="mt-3 block bg-primary text-white py-2 rounded-xl text-center font-semibold hover:bg-primary/80 transition"
+                  >
+                    {t("products.order")}
+                  </a>
+                </div>
+              </div>
             ))}
           </div>
         </div>
+      ))}
 
-        {/* Loading state */}
-        {products.length === 0 ? (
-          <div className="flex justify-center items-center py-20">
-            <div className="animate-spin h-12 w-12 border-4 border-blue-500 border-t-transparent rounded-full"></div>
-          </div>
-        ) : (
-          <>
-            {/* Products Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-              {paginatedProducts.map((item) => (
-                <div
-                  key={item.id}
-                  className="bg-white dark:bg-gray-800 rounded-3xl shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden group"
-                >
-                  <div className="h-56 bg-gray-200 dark:bg-gray-700 overflow-hidden relative">
-                    <img
-                      src={item.img}
-                      alt={item.name[currentLang]}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                      onError={(e) => {
-                        e.target.src =
-                          "https://via.placeholder.com/400x300?text=No+Image";
-                      }}
-                    />
-                  </div>
-
-                  <div className="p-6 flex flex-col gap-4">
-                    <h3 className="text-xl font-semibold text-gray-800 dark:text-white group-hover:text-blue-600 transition">
-                      {item.name[currentLang]}
-                    </h3>
-                    <p className="text-sm text-gray-600 dark:text-gray-300 line-clamp-3 leading-relaxed">
-                      {item.description[currentLang]}
-                    </p>
-
-                    <div className="flex items-center gap-1 text-yellow-400">
-                      {Array.from({ length: item.rating }).map((_, idx) => (
-                        <Star
-                          key={idx}
-                          size={18}
-                          fill="#facc15"
-                          stroke="#facc15"
-                        />
-                      ))}
-                    </div>
-
-                    <p className="text-3xl font-bold text-blue-600 dark:text-blue-400 mt-1">
-                      {item.price.toLocaleString()}{" "}
-                      {t("products.currency", "сум")}
-                    </p>
-
-                    <div className="flex justify-between mt-3">
-                      <button className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-blue-600 text-white font-medium hover:bg-blue-700 transition-all shadow-sm hover:shadow-lg">
-                        <ShoppingCart size={18} />
-                        {t("products.buy", "Купить")}
-                      </button>
-
-                      <button className="flex items-center gap-2 px-5 py-2.5 rounded-xl border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 transition">
-                        {t("products.details", "Подробнее")}
-                        <ArrowRight size={18} />
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            {/* Pagination */}
-            {totalPages > 1 && (
-              <div className="flex justify-center items-center gap-3 mt-12">
-                <button
-                  onClick={() => setPage((p) => Math.max(1, p - 1))}
-                  disabled={page === 1}
-                  className="px-4 py-2 rounded-xl bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 disabled:opacity-50 transition"
-                >
-                  {t("products.prev", "Prev")}
-                </button>
-
-                {Array.from({ length: totalPages }).map((_, idx) => (
-                  <button
-                    key={idx}
-                    onClick={() => setPage(idx + 1)}
-                    className={`px-4 py-2 rounded-xl transition ${
-                      page === idx + 1
-                        ? "bg-blue-600 text-white"
-                        : "bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600"
-                    }`}
-                  >
-                    {idx + 1}
-                  </button>
-                ))}
-
-                <button
-                  onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
-                  disabled={page === totalPages}
-                  className="px-4 py-2 rounded-xl bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 disabled:opacity-50 transition"
-                >
-                  {t("products.next", "Next")}
-                </button>
-              </div>
-            )}
-          </>
-        )}
-      </div>
+      {modalOpen && selected && (
+        <Modal product={selected} close={() => setModalOpen(false)} />
+      )}
     </section>
+  );
+}
+
+function Modal({ product, close }) {
+  const { t } = useTranslation();
+
+  return (
+    <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50">
+      <div className="bg-white dark:bg-gray-800 rounded-3xl p-6 max-w-xl w-full relative shadow-xl animate-fade">
+        <button
+          onClick={close}
+          className="absolute top-4 right-4 text-gray-400 hover:text-black dark:hover:text-white text-2xl"
+        >
+          ✕
+        </button>
+
+        <img
+          src={product.img}
+          className="w-full h-56 object-cover rounded-xl mb-5"
+        />
+
+        <h2 className="text-2xl font-bold mb-1">{product.name}</h2>
+        <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-3">
+          {product.desc}
+        </p>
+        <p className="text-3xl font-bold text-primary mb-6">{product.price} сум</p>
+
+        <a
+          href={`https://t.me/YOUR_TELEGRAM?text=Assalomu%20alaykum.%20Men%20"${product.name}"%20matrasiga%20buyurtma%20bermoqchiman.`}
+          target="_blank"
+          className="block text-center bg-primary text-white py-3 rounded-xl font-semibold hover:bg-primary/80"
+        >
+          {t("modal.order")}
+        </a>
+      </div>
+    </div>
   );
 }

@@ -81,6 +81,24 @@
 
     "kids_title": "Bolalar matraslari",
     "kids_desc": "Yangi tug‘ilgan chaqaloqlar va bolalar uchun xavfsiz hamda ortopedik qulay matraslar."
+  },
+
+    "heroo": {
+    "catalog": "Katalog"
+  },
+
+  "products": {
+    "title": "Bizning Mahsulotlar",
+
+    "memory": "Xotira ko‘pigi",
+    "orthopedic": "Ortopedik",
+    "kids": "Bolalar uchun",
+
+    "order": "Buyurtma berish"
+  },
+
+  "modal": {
+    "order": "Buyurtma berish"
   }
 
 }
