@@ -45,11 +45,11 @@ function App() {
               element={
                 <>
                   <Hero />
+                  <Products />
                   <About />
                   <WhyChooseUs />
                   <Types />
                   <Contact />
-                  <Products />
                 </>
               }
             />
