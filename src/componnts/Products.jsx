@@ -67,7 +67,7 @@ export default function Products() {
           </h3>
 
           {/* FIXED GRID */}
-          <div className="w-[1400px] justify-center m-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="max-w-[1400px] w-full justify-center m-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {list.map((item) => (
               <div
                 key={item.id}
