@@ -29,14 +29,13 @@ function App() {
     }
   }, []);
 
-  // Til almashtirilganda ham loading bo‘ladi
   useEffect(() => {
     const handleLanguageChange = () => {
       setLoading(true);
 
       setTimeout(() => {
         setLoading(false);
-      }, 800); // tezroq bo‘lsin
+      }, 800);
     };
 
     i18n.on("languageChanged", handleLanguageChange);
