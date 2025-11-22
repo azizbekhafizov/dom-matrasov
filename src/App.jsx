@@ -10,6 +10,7 @@ import Footer from "./componnts/Footer";
 import Loading from "./componnts/Loading";
 import Types from "./componnts/Types";
 import Products from "./componnts/Products";
+import FloatingChat from "./componnts/FloatingChat";
 
 function App() {
   const { i18n } = useTranslation();
@@ -61,6 +62,7 @@ function App() {
                   <WhyChooseUs />
                   <Types />
                   <Contact />
+                  <FloatingChat />
                 </>
               }
             />
