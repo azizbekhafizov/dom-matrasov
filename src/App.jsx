@@ -15,17 +15,28 @@ function App() {
   const { i18n } = useTranslation();
   const [loading, setLoading] = useState(true);
 
-  // Sahifa birinchi yuklanishida
+  // REAL PRELOADER — hamma rasmlar yuklanganda ochiladi
   useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 1500); // 1.5s
-    return () => clearTimeout(timer);
+    const handleLoad = () => {
+      setLoading(false);
+    };
+
+    if (document.readyState === "complete") {
+      setLoading(false);
+    } else {
+      window.addEventListener("load", handleLoad);
+      return () => window.removeEventListener("load", handleLoad);
+    }
   }, []);
 
-  // Til almashtirishda loading
+  // Til almashtirilganda ham loading bo‘ladi
   useEffect(() => {
     const handleLanguageChange = () => {
       setLoading(true);
-      setTimeout(() => setLoading(false), 2000); // 2s loading
+
+      setTimeout(() => {
+        setLoading(false);
+      }, 800); // tezroq bo‘lsin
     };
 
     i18n.on("languageChanged", handleLanguageChange);
@@ -39,6 +50,7 @@ function App() {
       ) : (
         <div className="bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
           <Navbar />
+
           <Routes>
             <Route
               path="/"
@@ -54,10 +66,10 @@ function App() {
               }
             />
           </Routes>
+
           <Footer />
         </div>
       )}
-      
     </Router>
   );
 }
