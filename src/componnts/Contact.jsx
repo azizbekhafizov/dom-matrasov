@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { MapPin, Phone, Mail } from "lucide-react";
 import telegram from "../assets/images/telegram.jpg";
@@ -6,12 +6,25 @@ import instagram from "../assets/images/instagram.jpg";
 
 const Contact = () => {
   const { t } = useTranslation();
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleTelegramSend = (e) => {
+    e.preventDefault();
+
+    const text = `Ism: ${name}\nTelefon: ${phone}\nXabar: ${message}`;
+    // Bu yerda @ViskaAdmin ga xabar yuborish linki
+    const telegramLink = `https://t.me/Visco_admin?text=${encodeURIComponent(
+      text
+    )}`;
+
+    // Telegramni yangi tabda ochish
+    window.open(telegramLink, "_blank");
+  };
 
   return (
-    <section
-      id="contact"
-      className="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-50 to-white dark:from-gray-900 dark:to-gray-800"
-    >
+    <section className="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-50 to-white dark:from-gray-900 dark:to-gray-800">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-bold leading-tight tracking-tight font-serif text-center mb-14 text-gray-900 dark:text-white">
           {t("contact.title")}
@@ -24,26 +37,24 @@ const Contact = () => {
               <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">
                 {t("contact.infoTitle")}
               </h3>
-
               <div className="space-y-4 text-gray-700 dark:text-gray-300">
                 <p className="flex items-center gap-3">
-                  <MapPin className="text-primary w-6 h-6" />
+                  <MapPin className="text-primary w-6 h-6" />{" "}
                   {t("contact.address")}
                 </p>
-
                 <p className="flex items-center gap-3">
-                  <Phone className="text-primary w-6 h-6" />
-                  +998 98 880 80 10
+                  <Phone className="text-primary w-6 h-6" /> +998 98 880 80 10
                 </p>
-
                 <p className="flex items-center gap-3">
-                  <Mail className="text-primary w-6 h-6" />
-                  domatrasov@gmail.com
+                  <Mail className="text-primary w-6 h-6" /> domatrasov@gmail.com
                 </p>
-
                 <div className="flex items-center">
                   <a target="_blank" href="https://t.me/matras">
-                    <img className="rounded-full w-8 h-8" src={telegram} alt="" />
+                    <img
+                      className="rounded-full w-8 h-8"
+                      src={telegram}
+                      alt=""
+                    />
                   </a>
                   <a
                     className="underline hover:text-primary ml-2"
@@ -53,10 +64,13 @@ const Contact = () => {
                     @matras
                   </a>
                 </div>
-
                 <div className="flex items-center">
                   <a target="_blank" href="https://instagram.com/dom.matrasov">
-                    <img className="rounded-full w-8 h-7" src={instagram} alt="" />
+                    <img
+                      className="rounded-full w-8 h-7"
+                      src={instagram}
+                      alt=""
+                    />
                   </a>
                   <a
                     className="underline hover:text-primary ml-2"
@@ -68,7 +82,6 @@ const Contact = () => {
                 </div>
               </div>
             </div>
-
             <div className="rounded-2xl overflow-hidden shadow-md border border-gray-200 dark:border-gray-700 h-80">
               <iframe
                 allowFullScreen=""
@@ -83,10 +96,9 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Right: Contact Form */}
+          {/* Right: Telegram Form */}
           <form
-            action="#"
-            method="post"
+            onSubmit={handleTelegramSend}
             className="space-y-6 p-8 rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 shadow-sm"
           >
             <div>
@@ -100,11 +112,12 @@ const Contact = () => {
                 id="name"
                 name="name"
                 type="text"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
                 required
                 className="block w-full rounded-lg border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-900 px-4 py-3 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:outline-none"
               />
             </div>
-
             <div>
               <label
                 htmlFor="phone"
@@ -116,11 +129,12 @@ const Contact = () => {
                 id="phone"
                 name="phone"
                 type="tel"
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
                 required
                 className="block w-full rounded-lg border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-900 px-4 py-3 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:outline-none"
               />
             </div>
-
             <div>
               <label
                 htmlFor="message"
@@ -132,10 +146,11 @@ const Contact = () => {
                 id="message"
                 name="message"
                 rows="5"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
                 className="block w-full rounded-lg border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-900 px-4 py-3 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:outline-none"
               ></textarea>
             </div>
-
             <button
               type="submit"
               className="w-full flex justify-center py-3 px-6 rounded-lg font-semibold text-white bg-gradient-to-r from-primary to-blue-500 hover:opacity-90 transition-all shadow-md"

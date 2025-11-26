@@ -27,11 +27,16 @@ export default function Hero() {
         </div>
 
         <div className="flex flex-wrap gap-4 justify-center mt-4">
-<a href="/products">
-
-          <button className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center rounded-lg h-12 px-5 bg-primary text-white text-base font-bold hover:bg-opacity-90 transition">
+          <button
+            onClick={() => {
+              const el = document.getElementById("products");
+              if (el) el.scrollIntoView({ behavior: "smooth" });
+            }}
+            className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center rounded-lg h-12 px-5 bg-primary text-white text-base font-bold hover:bg-opacity-90 transition"
+          >
             {t("hero.catalog")}
-          </button></a>
+          </button>
+
           <a
             href="https://t.me/Visco_admin"
             target="_blank"
