@@ -2,7 +2,6 @@
   "nav": {
     "home": "Bosh sahifa",
     "about": "Biz haqimizda",
-    "products": "Mahsulotlar",
     "delivery": "Yetkazib berish",
     "contacts": "Kontaktlar",
     "order": "Buyurtma berish"
@@ -88,40 +87,96 @@
   },
 
 
-  "products": {
-    "title": "Mahsulotlarimiz",
-    "memory": "Memory matraslar",
-    "orthopedic": "Ortopedik matraslar",
-    "kids": "Bolalar matraslari",
+"products": {
+  "title": "Mahsulotlarimiz",
+  "memory": "Memory matraslar",
+  "orthopedic": "Ortopedik matraslar",
+  "kids": "Bolalar uchun matraslar",
 
-    "memory1": {
-      "name": "Memory Classic",
-      "desc": "Zich Memory Foam qatlamiga ega yumshoq va qulay matras. Tananing shaklini eslab, bosimni kamaytiradi.",
-      "modalText": "Bu matras yuqori sifatli Memory Foam texnologiyasi asosida tayyorlangan bo‘lib, tananing tuzilishiga moslashadi va bosimni kamaytiradi.",
-      "btn": "Buyurtma berish"
-    },
-
-    "memory2": {
-      "name": "Memory Airflow",
-      "desc": "Nafas oluvchi texnologiya salqin uyqu ta’minlaydi. Issiqlikni ushlab qolmaydi.",
-      "modalText": "Airflow texnologiyasi tufayli havo aylanishi yaxshi bo‘ladi va butun tun davomida salqin uyqu beradi.",
-      "btn": "Buyurtma berish"
-    },
-
-    "ortho1": {
-      "name": "Ortho Hard",
-      "desc": "Qattiq ortopedik asos umurtqa to'g'ri turishini ta'minlaydi.",
-      "modalText": "Ortopedik qattiq asos orqa va umurtqa uchun to‘liq qo‘llab-quvvatlash beradi.",
-      "btn": "Buyurtma berish"
-    },
-
-    "kids1": {
-      "name": "Kids Comfort",
-      "desc": "Hipoallergen qoplamali, bolalar uchun xavfsiz matras.",
-      "modalText": "Kichik yoshdagi bolalar uchun xavfsiz, yumshoq va hipoallergen materialdan tayyorlangan.",
-      "btn": "Buyurtma berish"
-    }
+  "memory1": {
+    "name": "Memory Classic",
+    "desc": "Memory Foam qatlami bilan yumshoq va qulay matras. Tananing shaklini eslab, bosimni kamaytiradi.",
+    "modalText": "Ushbu matras yuqori sifatli Memory Foam texnologiyasi asosida ishlab chiqarilgan bo‘lib, tanaga moslashadi va umurtqa pog‘onasiga tushadigan yukni kamaytiradi.",
+    "btn": "Buyurtma berish"
   },
+
+  "memory2": {
+    "name": "Memory Airflow",
+    "desc": "Havo o‘tkazuvchi texnologiya tufayli salqin uyquni ta’minlaydi. Issiqlikni ushlab qolmaydi.",
+    "modalText": "Airflow texnologiyasi havo aylanishini yaxshilaydi va hatto issiq ob-havoda ham qulay uyquni ta’minlaydi.",
+    "btn": "Buyurtma berish"
+  },
+
+  "memory3": {
+    "name": "Memory Soft Touch",
+    "desc": "Juda yumshoq qoplama bosimni teng taqsimlaydi va yelka hamda beldagi yukni kamaytiradi.",
+    "modalText": "Memory Soft Touch yumshoq tuzilmasi tanani mayin qo‘llab-quvvatlaydi va qulay uyqu beradi.",
+    "btn": "Buyurtma berish"
+  },
+
+  "memory4": {
+    "name": "Memory Premium",
+    "desc": "Yuqori zichlikdagi Memory Foam — maksimal qulaylik va uzoq xizmat muddati.",
+    "modalText": "Premium toifadagi ushbu matras ideal tayanch va uzoq muddatli foydalanishni ta’minlaydi.",
+    "btn": "Buyurtma berish"
+  },
+
+  "ortho1": {
+    "name": "Ortho Hard",
+    "desc": "Qattiq ortopedik asos umurtqa pog‘onasini to‘g‘ri holatda ushlab turadi.",
+    "modalText": "Qattiq ortopedik konstruktsiya bel va umurtqa pog‘onasi uchun to‘g‘ri tayanch beradi.",
+    "btn": "Buyurtma berish"
+  },
+
+  "ortho2": {
+    "name": "Ortho Pro",
+    "desc": "Vazni katta insonlar uchun mustahkamlangan asos. Yukni teng taqsimlaydi.",
+    "modalText": "Kuchaytirilgan ortopedik asosi tufayli katta yuklamalarda ham qulaylikni saqlaydi.",
+    "btn": "Buyurtma berish"
+  },
+
+  "ortho3": {
+    "name": "Ortho Soft",
+    "desc": "Yumshoqroq ortopedik qatlam. Bel uchun foydali qo‘llab-quvvatlash.",
+    "modalText": "Yumshoq ortopedik tayanch bilan sog‘lom va qulay uyquni ta’minlaydi.",
+    "btn": "Buyurtma berish"
+  },
+
+  "ortho4": {
+    "name": "Ortho Premium",
+    "desc": "Premium ortopedik materiallar mustahkamlik va uzoq xizmatni ta’minlaydi.",
+    "modalText": "Yuqori sifatli ortopedik materiallardan tayyorlangan ushbu matras uzoq yillar xizmat qiladi.",
+    "btn": "Buyurtma berish"
+  },
+
+  "kids1": {
+    "name": "Kids Comfort",
+    "desc": "Allergiyaga qarshi, bolalar uchun xavfsiz qoplama.",
+    "modalText": "Gipoallergen materiallardan tayyorlangan bo‘lib, bolalar salomatligi uchun mutlaqo xavfsiz.",
+    "btn": "Buyurtma berish"
+  },
+
+  "kids2": {
+    "name": "Kids Soft",
+    "desc": "O‘smirlar uchun juda yumshoq va qulay variant.",
+    "modalText": "Kids Soft modeli yumshoqlik va qulaylikni ta’minlab, o‘smirlar uchun juda mos keladi.",
+    "btn": "Buyurtma berish"
+  },
+
+  "kids3": {
+    "name": "Kids Hard",
+    "desc": "Qattiq qatlam — umurtqa pog‘onasining to‘g‘ri rivojlanishi uchun to‘g‘ri tanlov.",
+    "modalText": "Kids Hard modeli umurtqa pog‘onasining sog‘lom rivojlanishini ta’minlaydi.",
+    "btn": "Buyurtma berish"
+  },
+
+  "kids4": {
+    "name": "Kids Premium",
+    "desc": "Havo o‘tkazuvchi materiallar qizib ketishni oldini oladi va sog‘lom uyqu beradi.",
+    "modalText": "Bolalar uchun premium matras — qulaylik, salomatlik va havoning yaxshi aylanishi.",
+    "btn": "Buyurtma berish"
+  }
+},
 
   "card": {
     "details": "Batafsil ko‘rish"

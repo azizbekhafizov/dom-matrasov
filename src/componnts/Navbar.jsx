@@ -24,7 +24,6 @@ export default function Navbar() {
   const navLinks = [
     { name: t("nav.home"), to: "hero", scroll: true },
     { name: t("nav.about"), to: "about", scroll: true },
-    { name: t("nav.products"), to: "products", scroll: false },
     { name: t("nav.contacts"), to: "contact", scroll: true },
   ];
 
