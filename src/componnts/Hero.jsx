@@ -2,6 +2,7 @@
 import { Truck, Clock, Layers } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
+import HeroBg from "../assets/images/fon3.jpg";
 
 export default function Hero() {
   const { t } = useTranslation();
@@ -11,9 +12,7 @@ export default function Hero() {
       {/* 🔥 HERO BACKGROUND */}
       <div
         className="relative flex flex-col justify-center items-center text-center min-h-[90vh] bg-cover bg-center"
-        style={{
-          backgroundImage: "url('src/assets/images/fon3.jpg')",
-        }}
+        style={{ backgroundImage: `url(${HeroBg})` }}
       >
         {/* ✅ DARK OVERLAY */}
         <div className="absolute inset-0 bg-black/50 backdrop-blur-[1px]" />
@@ -79,9 +78,21 @@ export default function Hero() {
       <div className="bg-background-light py-8 px-4 md:px-10">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
           {[
-            { icon: Clock, title: t("hero.fastTitle"), desc: t("hero.fastDesc") },
-            { icon: Truck, title: t("hero.deliveryTitle"), desc: t("hero.deliveryDesc") },
-            { icon: Layers, title: t("hero.customTitle"), desc: t("hero.customDesc") },
+            {
+              icon: Clock,
+              title: t("hero.fastTitle"),
+              desc: t("hero.fastDesc"),
+            },
+            {
+              icon: Truck,
+              title: t("hero.deliveryTitle"),
+              desc: t("hero.deliveryDesc"),
+            },
+            {
+              icon: Layers,
+              title: t("hero.customTitle"),
+              desc: t("hero.customDesc"),
+            },
           ].map(({ icon: Icon, title, desc }, i) => (
             <motion.div
               key={i}
