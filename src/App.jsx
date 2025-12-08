@@ -1,42 +1,35 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense, lazy } from "react";
 import { useTranslation } from "react-i18next";
+
 import Navbar from "./componnts/Navbar";
-import Hero from "./componnts/Hero";
-import About from "./componnts/About";
-import WhyChooseUs from "./componnts/WhyChooseUs";
-import Contact from "./componnts/Contact";
 import Footer from "./componnts/Footer";
 import Loading from "./componnts/Loading";
-import Types from "./componnts/Types";
-import Products from "./componnts/Products";
 import FloatingChat from "./componnts/FloatingChat";
+
+// ✅ Lazy loaded sections
+const Hero = lazy(() => import("./componnts/Hero"));
+const Products = lazy(() => import("./componnts/Products"));
+const About = lazy(() => import("./componnts/About"));
+const WhyChooseUs = lazy(() => import("./componnts/WhyChooseUs"));
+const Types = lazy(() => import("./componnts/Types"));
+const Contact = lazy(() => import("./componnts/Contact"));
 
 function App() {
   const { i18n } = useTranslation();
   const [loading, setLoading] = useState(true);
 
-  // REAL PRELOADER — hamma rasmlar yuklanganda ochiladi
+  // ✅ Minimal initial loader
   useEffect(() => {
-    const handleLoad = () => {
-      setLoading(false);
-    };
-
-    if (document.readyState === "complete") {
-      setLoading(false);
-    } else {
-      window.addEventListener("load", handleLoad);
-      return () => window.removeEventListener("load", handleLoad);
-    }
+    const timer = setTimeout(() => setLoading(false), 600);
+    return () => clearTimeout(timer);
   }, []);
 
+  // ✅ Language change loader (to‘g‘ri qoladi)
   useEffect(() => {
     const handleLanguageChange = () => {
       setLoading(true);
-
-      setTimeout(() => {
-        setLoading(false);
-      }, 800);
+      setTimeout(() => setLoading(false), 500);
     };
 
     i18n.on("languageChanged", handleLanguageChange);
@@ -51,22 +44,24 @@ function App() {
         <div className="bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
           <Navbar />
 
-          <Routes>
-            <Route
-              path="/"
-              element={
-                <>
-                  <Hero />
-                  <Products />
-                  <About />
-                  <WhyChooseUs />
-                  <Types />
-                  <Contact />
-                  <FloatingChat />
-                </>
-              }
-            />
-          </Routes>
+          <Suspense fallback={<Loading />}>
+            <Routes>
+              <Route
+                path="/"
+                element={
+                  <>
+                    <Hero />
+                    <Products />
+                    <About />
+                    <WhyChooseUs />
+                    <Types />
+                    <Contact />
+                    <FloatingChat />
+                  </>
+                }
+              />
+            </Routes>
+          </Suspense>
 
           <Footer />
         </div>
