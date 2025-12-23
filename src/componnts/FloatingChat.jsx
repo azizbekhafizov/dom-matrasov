@@ -45,14 +45,17 @@ const FloatingChat = () => {
         target="_blank"
         rel="noopener noreferrer"
         className="
-          fixed bottom-8 right-8 z-50
-          w-[70px] h-[70px]
-          rounded-full bg-[#004b93]
-          flex items-center justify-center
-          transition-all duration-300
-          hover:scale-110
-        "
-        style={{ animation: "neonPulse 2.2s infinite ease-in-out" }}
+    fixed bottom-6 z-50
+    w-[70px] h-[70px]
+    rounded-full bg-[#004b93]
+    flex items-center justify-center
+    transition-all duration-300
+    hover:scale-110
+  "
+        style={{
+          right: "25px", // 👈 o‘ngdan kamroq masofa
+          animation: "neonPulse 2.2s infinite ease-in-out",
+        }}
       >
         {/* Neon halo animation */}
         <span

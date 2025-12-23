@@ -100,18 +100,48 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="rounded-2xl overflow-hidden shadow-md border border-gray-200 dark:border-gray-700 h-80">
-              <iframe
-                allowFullScreen=""
-                height="100%"
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d95908.11893113175!2d69.1979727409247!3d41.28251249764515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b0cc379e9c3%3A0xa5a9323b4aa5cb98!2sTashkent%2C%20Uzbekistan!5e0!3m2!1sen!2s!4v1678886400000!5m2!1sen!2s"
-                style={{ border: 0 }}
-                width="100%"
-                title="Google Maps"
-              ></iframe>
-            </div>
+<div className="rounded-2xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-700">
+  <div
+    className="relative h-80 w-full flex items-center justify-center"
+    style={{
+      backgroundImage:
+        "url(https://images.unsplash.com/photo-1502920514313-52581002a659?q=80&w=1200&auto=format&fit=crop)",
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+    }}
+  >
+    {/* Dark overlay */}
+    <div className="absolute inset-0 bg-black/50" />
+
+    {/* Content */}
+    <div className="relative z-10 text-center">
+      <h3 className="text-white text-2xl font-bold mb-4">
+        Bizning manzil
+      </h3>
+
+      <div className="flex gap-4 justify-center">
+        <a
+          href="https://maps.app.goo.gl/D5e3HwteToBmB18e8"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-white text-gray-900 px-5 py-2 rounded-full font-semibold hover:scale-105 transition"
+        >
+          Google Maps
+        </a>
+
+        <a
+          href="https://yandex.uz/maps/-/CLCdiP0r"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-white text-gray-900 px-5 py-2 rounded-full font-semibold hover:scale-105 transition"
+        >
+          Yandex Maps
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+    
           </motion.div>
 
           {/* RIGHT: Telegram Form */}
