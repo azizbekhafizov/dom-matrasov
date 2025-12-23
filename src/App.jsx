@@ -6,6 +6,7 @@ import Navbar from "./componnts/Navbar";
 import Footer from "./componnts/Footer";
 import Loading from "./componnts/Loading";
 import FloatingChat from "./componnts/FloatingChat";
+import ScrollToTop from "./componnts/ScrollToTop";
 
 // ✅ Lazy loaded sections
 const Hero = lazy(() => import("./componnts/Hero"));
@@ -57,6 +58,7 @@ function App() {
                     <Types />
                     <Contact />
                     <FloatingChat />
+                    <ScrollToTop />
                   </>
                 }
               />
